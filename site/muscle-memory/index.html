@@ -3,19 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Muscle Memory case study | TIMIMBO</title>
-<meta name="description" content="Muscle Memory: a strength training app and gym platform designed, built and shipped solo with AI.">
+<title>Muscle Memory case study | Tim Imbordino, TIMIMBO</title>
+<meta name="description" content="Muscle Memory: a strength training app and gym platform that Tim Imbordino designed and shipped solo, with Claude Code building from his specs.">
+<meta name="theme-color" content="#0D1015">
+<link rel="canonical" href="https://work.timimbo.com/muscle-memory/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TIMIMBO">
+<meta property="og:url" content="https://work.timimbo.com/muscle-memory/">
 <meta property="og:title" content="Muscle Memory case study | TIMIMBO">
-<meta property="og:description" content="A strength training app and gym platform designed, built and shipped solo with AI.">
+<meta property="og:description" content="A strength training app and gym platform, designed and shipped solo with AI as the engineering partner.">
+<meta property="og:image" content="https://work.timimbo.com/images/og-muscle-memory.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Muscle Memory case study: three app screens on a dark background">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muscle Memory case study | TIMIMBO">
+<meta name="twitter:description" content="A strength training app and gym platform, designed and shipped solo with AI as the engineering partner.">
+<meta name="twitter:image" content="https://work.timimbo.com/images/og-muscle-memory.jpg">
+<meta name="twitter:image:alt" content="Muscle Memory case study: three app screens on a dark background">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
+<script src="../motion.js" defer></script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<nav class="nav"><div class="wrap">
+<nav class="nav" aria-label="Main"><div class="wrap">
 <a class="logo" href="https://timimbo.com" target="_top">TIMIMBO</a>
 <div class="links">
 <a href="https://timimbo.com" target="_top">Work</a>
@@ -24,6 +42,7 @@
 </div>
 </div></nav>
 
+<main id="main">
 <header class="top wrap">
 <p class="eb">Case study 01 · Product design + AI</p>
 <h1 class="hero">Muscle Memory</h1>
@@ -36,11 +55,29 @@
 </div>
 </header>
 
-<div class="wrap" style="padding-bottom:120px">
+<div class="wrap lead-shots">
 <div class="phones">
-<figure class="phone"><img src="../images/mm-workouts.jpg" alt="Workout list showing the five-day cycle, with today's session up next" loading="lazy"></figure>
-<figure class="phone offset"><img src="../images/mm-session.jpg" alt="An exercise in progress with logged sets, a coaching note and the rest timer" loading="lazy"></figure>
-<figure class="phone"><img src="../images/mm-progress.jpg" alt="Progress tab with weekly stats, body weight trend and volume by week" loading="lazy"></figure>
+<figure class="fig">
+<div class="phone"><img src="../images/mm-workouts.jpg" width="786" height="1704" alt="Workout list for a five-day program, with today's session marked up next and the finished days checked off"></div>
+<figcaption class="fc"><strong>Today's workout, up next.</strong> The cycle knows where you left off.</figcaption>
+</figure>
+<figure class="fig offset">
+<div class="phone">
+<img src="../images/mm-session.jpg" width="786" height="1704" alt="Back and Shoulders session in progress: two sets logged, an orange Recall note under each exercise, and the rest timer counting down" loading="lazy">
+<span class="hot r" style="--t:48.4%;--l:5.5%;--w:58%;--h:4%" aria-hidden="true"><span class="pin">1</span></span>
+<span class="hot" style="--t:86.3%;--l:1.5%;--w:97%;--h:6.6%" aria-hidden="true"><span class="pin">2</span></span>
+</div>
+<figcaption>
+<ol class="notes">
+<li data-n="1"><span><strong>Recall coaching note.</strong> Stuck at 35 for three weeks, so it says drop the weight. Fixed rules, no AI.</span></li>
+<li data-n="2"><span><strong>Rest timer</strong> pinned to the bottom, with +30s and Skip in thumb reach.</span></li>
+</ol>
+</figcaption>
+</figure>
+<figure class="fig">
+<div class="phone"><img src="../images/mm-progress.jpg" width="786" height="1704" alt="Progress tab with weekly stats, a body weight trend line and training volume by week" loading="lazy"></div>
+<figcaption class="fc"><strong>Progress at a glance.</strong> Weekly stats, body weight and volume.</figcaption>
+</figure>
 </div>
 </div>
 
@@ -53,14 +90,16 @@
 <div>
 <p class="eb">My approach</p>
 <h2 class="h2">Design it like a product, build it like a studio of one.</h2>
-<p class="p">I owned every layer: brand, design system, UX flows, specs and launch. I wrote detailed product specs and used Claude Code to build them, reviewing each branch on a live preview before it shipped. Design decisions came from my own training floor and beta tester feedback.</p>
+<p class="p">I owned every layer: brand, design system, UX flows, specs and launch. Design decisions came from my own training floor and beta tester feedback, and I turned them into specs that Claude Code built from.</p>
 </div>
 </div></section>
 
 <section class="sec"><div class="wrap">
+<div class="intro">
 <p class="eb">Design system</p>
 <h2 class="h2 narrow">Built for a dim gym and a sweaty thumb.</h2>
-<p class="p narrow" style="margin-bottom:48px">A dark interface with two signal colors: ember for power days, glacier for hypertrophy days. Barlow Condensed keeps numbers big and scannable between sets.</p>
+<p class="p narrow">A dark interface with two signal colors: ember for power days, glacier for hypertrophy days. Barlow Condensed keeps numbers big and scannable between sets.</p>
+</div>
 <div class="swatches">
 <div class="sw"><div class="c" style="background:#FF6B3D"></div><div class="n">Ember · Power</div><div class="h">#FF6B3D</div></div>
 <div class="sw"><div class="c" style="background:#43C6E8"></div><div class="n">Glacier · Hypertrophy</div><div class="h">#43C6E8</div></div>
@@ -70,7 +109,7 @@
 </div>
 <div class="card typecard">
 <div class="bignum">225<span> × 5</span></div>
-<div style="flex:1 1 280px">
+<div style="flex:1 1 260px">
 <div class="tlabel">Barlow Condensed / headers + numbers</div>
 <p class="cp" style="margin-top:8px;font-size:16px">Barlow for body copy. Big tap targets, one-handed logging, no layout shift when the keyboard opens.</p>
 </div>
@@ -78,20 +117,45 @@
 </div></section>
 
 <section class="sec"><div class="wrap">
+<div class="intro">
 <p class="eb">Key features</p>
-<h2 class="h2" style="margin-bottom:48px">Small interactions, solved carefully.</h2>
+<h2 class="h2">Small interactions, solved carefully.</h2>
+</div>
 <div class="g3">
 <div class="card"><div class="num">01</div><h3 class="ct">Program rotation</h3><p class="cp">Rotate whole programs on a schedule. Every new cycle restarts at Day 1, so nobody loses their place.</p></div>
 <div class="card"><div class="num">02</div><h3 class="ct">Long-press supersets</h3><p class="cp">Hold an exercise to link it to the next. Three gestures kept distinct: scroll, open and link, tuned for left- and right-handed lifters.</p></div>
 <div class="card"><div class="num">03</div><h3 class="ct">Exercise swap</h3><p class="cp">Machine taken? Swap it mid-workout. A SWAPPED badge keeps the history honest.</p></div>
-<div class="card"><div class="num glacier">04</div><h3 class="ct">Recall coaching notes</h3><p class="cp">Inline notes read your last session and tell you what to do next: move up, hold, or back off a stalled lift.</p></div>
-<div class="card"><div class="num glacier">05</div><h3 class="ct">Local-first with cloud backup</h3><p class="cp">Workouts save on the phone and work offline. A one-time email code turns on backup and sync across devices, no password.</p></div>
+<div class="card"><div class="num glacier">04</div><h3 class="ct">Recall coaching notes</h3><p class="cp">Inline notes read your last session and tell you what to do next: move up, hold, or back off a stalled lift. Plain rules, no AI, so the advice is always predictable.</p></div>
+<div class="card"><div class="num glacier">05</div><h3 class="ct">Local-first with cloud backup</h3><p class="cp">Workouts save on the phone and work offline. A one-time email code turns on backup, which syncs workouts and body weight across devices. No password.</p></div>
 <div class="card"><div class="num glacier">06</div><h3 class="ct">Three-door onboarding</h3><p class="cp">Get a recommended program, build your own, or import one. Experience level shapes how much the app explains.</p></div>
 </div>
 <div class="phones two mt">
-<figure class="phone"><img src="../images/mm-superset.jpg" alt="Two exercises linked as a superset" loading="lazy"></figure>
-<figure class="phone"><img src="../images/mm-history.jpg" alt="History tab grouped by month with personal records flagged in gold" loading="lazy"></figure>
+<figure class="fig">
+<div class="phone">
+<img src="../images/mm-superset.jpg" width="786" height="1704" alt="Rack Chin and Seated Cable Row linked as a superset, joined by an orange Linked bar under a header that says alternate and rest after the pair" loading="lazy">
+<span class="hot" style="--t:27%;--l:3%;--w:88%;--h:4.2%" aria-hidden="true"><span class="pin">1</span></span>
+<span class="hot" style="--t:55.3%;--l:4.2%;--w:91.6%;--h:3.2%" aria-hidden="true"><span class="pin">2</span></span>
 </div>
+<figcaption>
+<ol class="notes">
+<li data-n="1"><span><strong>The hint is on screen.</strong> Long-press, then tap two exercises to link them.</span></li>
+<li data-n="2"><span><strong>The superset link.</strong> Linked exercises sit in one card: alternate, then rest after the pair.</span></li>
+</ol>
+</figcaption>
+</figure>
+<figure class="fig">
+<div class="phone">
+<img src="../images/mm-history.jpg" width="786" height="1704" alt="History tab for November with fourteen sessions listed by date, and gold badges counting the personal records set in each" loading="lazy">
+<span class="hot" style="--t:7.6%;--l:38.6%;--w:22%;--h:31%" aria-hidden="true"><span class="pin">1</span></span>
+</div>
+<figcaption>
+<ol class="notes">
+<li data-n="1"><span><strong>Gold means a record.</strong> Gold is saved for personal records only, so a good week stands out at a glance.</span></li>
+</ol>
+</figcaption>
+</figure>
+</div>
+<p class="cap">Screens show seven weeks of sample training data, loaded into the real app.</p>
 </div></section>
 
 <section class="sec alt"><div class="wrap">
@@ -101,20 +165,54 @@
 <div class="card big">
 <div class="lbl">Building it</div>
 <h3 class="ct">Claude Code as engineering partner</h3>
-<p class="cp">I write the specs, Claude Code writes the code on separate branches, and I review every change on a live preview before it reaches production. I also run audit passes: AI reports bugs and UX pain points first, and nothing gets fixed until I've reviewed the findings.</p>
+<p class="cp">I write the specs and Claude Code writes the code. I also run audit passes: AI reports bugs and UX pain points first, and nothing gets fixed until I've reviewed the findings. The full loop is in the Process section below.</p>
 </div>
 <div class="card big">
 <div class="lbl">Inside it</div>
 <h3 class="ct">Photo-to-program import</h3>
-<p class="cp">Snap a photo of a whiteboard or a coach's program and Claude reads it into an editable draft. Pasted text and PDFs are parsed right on the phone. My rule: the AI parses, it never authors. The lifter stays in control of every set.</p>
+<p class="cp">Signed-in lifters can snap a photo of a whiteboard or a coach's program, and Claude reads it into an editable draft. Pasted text, .txt files and PDFs are parsed right on the phone.</p>
+<p class="cp"><span class="tagline">My rule: the AI parses, it never authors. The lifter stays in control of every set.</span></p>
 </div>
 </div>
 <div class="phones mt">
-<figure class="phone"><img src="../images/mm-new-program.jpg" alt="New program screen: generate, paste, photo or build manually" loading="lazy"></figure>
-<figure class="phone"><img src="../images/mm-import-paste.jpg" alt="A program pasted in as plain text" loading="lazy"></figure>
-<figure class="phone"><img src="../images/mm-import-review.jpg" alt="Review screen showing the parsed three-day program before saving" loading="lazy"></figure>
+<figure class="fig">
+<div class="phone"><img src="../images/mm-new-program.jpg" width="786" height="1704" alt="New program screen with four ways in: generate a program, paste text, upload a photo, or build manually" loading="lazy"></div>
+<figcaption class="fc"><strong>1. Pick a way in.</strong> Generate, paste, photo or build by hand.</figcaption>
+</figure>
+<figure class="fig">
+<div class="phone"><img src="../images/mm-import-paste.jpg" width="786" height="1704" alt="A three-day program pasted in as plain text, ready to be read" loading="lazy"></div>
+<figcaption class="fc"><strong>2. Paste the program.</strong> Plain text is parsed on the phone.</figcaption>
+</figure>
+<figure class="fig">
+<div class="phone">
+<img src="../images/mm-import-review.jpg" width="786" height="1704" alt="Review screen titled Here's what we found: three days and fifteen exercises with sets, reps and weights, and Start now or Save for later buttons" loading="lazy">
+<span class="hot r" style="--t:18.2%;--l:2.2%;--w:95.6%;--h:5.4%" aria-hidden="true"><span class="pin">1</span></span>
 </div>
-<p class="cap">Bring a program in, review every day and exercise, then start it now or save it for later.</p>
+<figcaption>
+<ol class="notes">
+<li data-n="1"><span><strong>3. Check it over.</strong> The lifter reviews every day and exercise before anything is saved.</span></li>
+</ol>
+</figcaption>
+</figure>
+</div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+<div class="intro">
+<p class="eb">Process</p>
+<h2 class="h2 narrow">Specs in, reviewed software out.</h2>
+<p class="p narrow">I design and direct, and Claude Code writes the code. Every change runs through the same loop, and nothing reaches the live app until I've seen it working.</p>
+</div>
+<ol class="steps">
+<li><h3 class="ct">I write the spec</h3><p class="cp">The problem, the flow, the edge cases and what done looks like. Most of it comes from my own sessions on the gym floor and from beta tester feedback.</p></li>
+<li><h3 class="ct">Claude Code builds on a branch</h3><p class="cp">Each change is built on its own branch, so the live app is never touched while work is in progress.</p></li>
+<li><h3 class="ct">I review a deploy preview</h3><p class="cp">Every branch gets a working copy of the app at its own link. I test it the way a lifter would, on a real phone.</p></li>
+<li class="gate"><h3 class="ct">Then it merges</h3><p class="cp">Only after I sign off does the change merge and ship. Audit passes follow the same rule: findings first, fixes only once I've reviewed them.</p></li>
+</ol>
+<div class="spec">
+<div class="lbl">From a real spec</div>
+<blockquote class="ph-text">[PLACEHOLDER: 2 to 4 lines quoted from one of your real Muscle Memory specs, for example the superset or Recall notes spec]</blockquote>
+</div>
 </div></section>
 
 <section class="sec"><div class="wrap">
@@ -123,7 +221,7 @@
 <div class="g2" style="margin-top:32px">
 <div>
 <p class="p">The owner of America's Gym in Wheeling, IL used to walk every new member around the floor and show them each machine. After growing past 100 pieces of equipment, that stopped being possible, and new members felt intimidated by gear they didn't know how to use.</p>
-<p class="p">I designed a facility layer for Muscle Memory. The gym supplies its equipment list and the app builds workouts from what's actually on the floor, with the owner's own demo videos as tutorials.</p>
+<p class="p">I designed a facility layer for Muscle Memory, with America's Gym as the pilot. The gym supplies its equipment list and the app builds workouts from what's actually on the floor, with the owner's own demo videos as tutorials.</p>
 </div>
 <div class="stack">
 <div class="card"><h3 class="ct">Facility-aware workouts</h3><p class="cp">Generated from the gym's real equipment.</p></div>
@@ -133,29 +231,60 @@
 </div>
 </div>
 <div class="phones mt">
-<figure class="phone"><img src="../images/ag-start.jpg" alt="America's Gym start screen: Nobody should stand in front of a machine guessing" loading="lazy"></figure>
-<figure class="phone offset"><img src="../images/ag-floor.jpg" alt="The Floor: every machine in the gym, grouped by body area, searchable" loading="lazy"></figure>
-<figure class="phone"><img src="../images/ag-tutorial.jpg" alt="Machine tutorial for the Reloaded Pendulum Squat: what it trains and numbered setup steps" loading="lazy"></figure>
+<figure class="fig">
+<div class="phone"><img src="../images/ag-start.jpg" width="786" height="1704" alt="America's Gym start screen in the gym's red and blue, headlined Nobody should stand in front of a machine guessing" loading="lazy"></div>
+<figcaption class="fc"><strong>Member view.</strong> The gym's own brand, powered by Muscle Memory.</figcaption>
+</figure>
+<figure class="fig offset">
+<div class="phone">
+<img src="../images/ag-floor.jpg" width="786" height="1704" alt="The Floor screen: Every machine, explained. Scan the code on any machine, or search. Machines are listed by body area with codes like AR-01" loading="lazy">
+<span class="hot r" style="--t:19.4%;--l:2.6%;--w:79%;--h:3.4%" aria-hidden="true"><span class="pin">1</span></span>
+<span class="hot" style="--t:37.8%;--l:3.8%;--w:13.5%;--h:55%" aria-hidden="true"><span class="pin">2</span></span>
 </div>
-<p class="cap">The pitch prototype, in the gym's own brand. Every machine has a QR sticker that opens its tutorial. Videos are stand-ins until the owner's demos go in.</p>
+<figcaption>
+<ol class="notes">
+<li data-n="1"><span><strong>Scan the QR code on any machine</strong> to jump straight to its tutorial, or search the floor.</span></li>
+<li data-n="2"><span><strong>Every machine has a code</strong>, grouped by body area.</span></li>
+</ol>
+</figcaption>
+</figure>
+<figure class="fig">
+<div class="phone">
+<img src="../images/ag-tutorial.jpg" width="786" height="1704" alt="Machine tutorial for the Reloaded Pendulum Squat: a stand-in video, the muscles it trains, and numbered setup steps" loading="lazy">
+<span class="hot" style="--t:43%;--l:4.6%;--w:90.8%;--h:4%" aria-hidden="true"><span class="pin">1</span></span>
+<span class="hot r" style="--t:61%;--l:7.5%;--w:85%;--h:33%" aria-hidden="true"><span class="pin">2</span></span>
+</div>
+<figcaption>
+<ol class="notes">
+<li data-n="1"><span><strong>Video stand-in</strong> until the owner's own demo goes in.</span></li>
+<li data-n="2"><span><strong>Numbered setup steps</strong>, the same walkthrough the owner used to give in person.</span></li>
+</ol>
+</figcaption>
+</figure>
+</div>
+<p class="cap">The pitch prototype, in the gym's own brand, with member, owner and admin views.</p>
 </div></section>
 
 <section class="sec"><div class="wrap">
 <p class="eb">Business model</p>
 <h2 class="h2">Free, on purpose.</h2>
-<div class="g2 tight" style="margin-top:40px">
-<div class="card big"><div class="tier">EVERYTHING INCLUDED</div><p class="cp" style="margin-top:12px">Programs, rotation, coaching notes, imports, weekly reports and full history. No paywall, no subscription.</p></div>
-<div class="card big hl"><div class="tier hl">THE GROWTH PLAY</div><p class="cp" style="margin-top:12px">I built a paid tier on Stripe, then removed it to grow the user base first. Gyms are the path to revenue: the facility layer gives every member the app through their membership.</p></div>
+<div class="g2 tight" style="margin-top:32px">
+<div class="card big"><div class="tier">EVERYTHING INCLUDED</div><p class="cp" style="margin-top:12px">Programs, rotation, coaching notes, imports, weekly reports and full history. No paywall.</p></div>
+<div class="card big hl"><div class="tier hl">THE GROWTH PLAY</div><p class="cp" style="margin-top:12px">Grow the user base first. Gyms are the path forward: the facility layer gives every member the app through their membership.</p></div>
 </div>
 </div></section>
 
-<section class="sec" style="padding-bottom:96px"><div class="wrap next">
+<section class="sec end"><div class="wrap next">
 <div>
 <p class="eb dim">Next case study</p>
 <a class="big" href="../bannerfactory/">BannerFactory →</a>
 </div>
+<div>
 <a class="btn" href="https://mymusclememory.app" target="_blank" rel="noopener">Try Muscle Memory</a>
+<p class="small">Sign-up is invite only for now.</p>
+</div>
 </div></section>
+</main>
 
 <footer><div class="wrap">
 <span>© TIMIMBO LLC</span>

@@ -3,19 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BannerFactory case study | TIMIMBO</title>
-<meta name="description" content="BannerFactory: one upload in, a full set of on-brand display banners out. Designed and built with AI.">
+<title>BannerFactory case study | Tim Imbordino, TIMIMBO</title>
+<meta name="description" content="BannerFactory: one upload in, 16 standard display banner sizes out, each checked for legibility. Designed by Tim Imbordino and built by Claude Code from his specs.">
+<meta name="theme-color" content="#0D1015">
+<link rel="canonical" href="https://work.timimbo.com/bannerfactory/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="TIMIMBO">
+<meta property="og:url" content="https://work.timimbo.com/bannerfactory/">
 <meta property="og:title" content="BannerFactory case study | TIMIMBO">
-<meta property="og:description" content="One upload in, a full set of on-brand display banners out.">
+<meta property="og:description" content="One upload in, a full set of on-brand display banners out. Design system rules, encoded as software.">
+<meta property="og:image" content="https://work.timimbo.com/images/og-bannerfactory.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="BannerFactory case study: the editor showing a full set of sample banners">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="BannerFactory case study | TIMIMBO">
+<meta name="twitter:description" content="One upload in, a full set of on-brand display banners out. Design system rules, encoded as software.">
+<meta name="twitter:image" content="https://work.timimbo.com/images/og-bannerfactory.jpg">
+<meta name="twitter:image:alt" content="BannerFactory case study: the editor showing a full set of sample banners">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../styles.css">
+<script src="../motion.js" defer></script>
 </head>
 <body class="bf">
+<a class="skip" href="#main">Skip to content</a>
 
-<nav class="nav"><div class="wrap">
+<nav class="nav" aria-label="Main"><div class="wrap">
 <a class="logo" href="https://timimbo.com" target="_top">TIMIMBO</a>
 <div class="links">
 <a href="https://timimbo.com" target="_top">Work</a>
@@ -24,6 +42,7 @@
 </div>
 </div></nav>
 
+<main id="main">
 <header class="top wrap">
 <p class="eb">Case study 02 · Product design + AI</p>
 <h1 class="hero">BannerFactory</h1>
@@ -36,8 +55,11 @@
 </div>
 </header>
 
-<div class="wrap" style="padding-bottom:120px">
-<figure class="frame"><img src="../images/bf-editor.jpg" alt="BannerFactory editor: layer panel on the left, the full banner set laid out by size group"></figure>
+<div class="wrap lead-shots">
+<figure class="fig">
+<div class="frame"><img src="../images/bf-editor.jpg" width="2000" height="1250" alt="BannerFactory editor: the layer panel on the left and the full set of Field and Co. sample banners laid out by size group"></div>
+<figcaption class="cap">The editor. Layers on the left, every size on one canvas. The app's working name, OnSpec, appears in the corner.</figcaption>
+</figure>
 </div>
 
 <section class="sec"><div class="wrap g2">
@@ -54,31 +76,49 @@
 </div></section>
 
 <section class="sec"><div class="wrap">
+<div class="intro">
 <p class="eb">How it works</p>
-<h2 class="h2" style="margin-bottom:48px">Three steps from assets to export.</h2>
+<h2 class="h2">Three steps from assets to export.</h2>
+</div>
 <div class="g3">
 <div class="card"><div class="step">1</div><h3 class="ct">Upload once</h3><p class="cp">Product image, logo, headline, and certification badges like Non-GMO or Informed Sport, plus a brand category.</p></div>
 <div class="card"><div class="step">2</div><h3 class="ct">Auto-layout every size</h3><p class="cp">A canvas layout engine places each element per size using rules from the design system. Preview everything at once and fine-tune any one.</p></div>
 <div class="card"><div class="step">3</div><h3 class="ct">Batch export</h3><p class="cp">Download the full set as one ZIP, named and sized for upload to Amazon DSP or any other ad platform.</p></div>
 </div>
-<figure class="frame mt"><img src="../images/bf-checks.jpg" alt="List view showing every size with automatic legibility checks" loading="lazy"></figure>
-<p class="cap">Every size is checked as you work. The tool flags any size where text had to shrink or the button got too small, before anything is exported.</p>
+<figure class="fig mt">
+<div class="frame">
+<img src="../images/bf-checks.jpg" width="2000" height="1250" alt="List view of all 16 sizes grouped into leaderboards and mobile. A warning says the headline shrank on 2 sizes, and each row shows No issues or an issue count" loading="lazy">
+<span class="hot r" style="--t:1%;--l:58.4%;--w:8.6%;--h:4%" aria-hidden="true"><span class="pin">1</span></span>
+<span class="hot" style="--t:20.6%;--l:28.2%;--w:17.8%;--h:3.2%" aria-hidden="true"><span class="pin">2</span></span>
+<span class="hot" style="--t:67.6%;--l:86.6%;--w:6.4%;--h:27%" aria-hidden="true"><span class="pin">3</span></span>
+</div>
+<figcaption>
+<ol class="notes cols">
+<li data-n="1"><span><strong>All 16 sizes</strong> from one upload, Amazon DSP and IAB standard.</span></li>
+<li data-n="2"><span><strong>Legibility check.</strong> The headline had to shrink on 2 sizes, so the group gets a warning.</span></li>
+<li data-n="3"><span><strong>Status for every size.</strong> No issues, or a count to fix, before anything is exported.</span></li>
+</ol>
+</figcaption>
+</figure>
 </div></section>
 
 <section class="sec alt"><div class="wrap">
+<div class="intro">
 <p class="eb">One asset, every placement</p>
 <h2 class="h2 narrow">The same creative, laid out for each size by rule.</h2>
-<p class="p narrow" style="margin-bottom:48px">Real output from a single upload, shown at reduced scale. Field &amp; Co. is a sample brand made for this case study.</p>
-<div class="ads">
-<div class="ad" style="width:582px;aspect-ratio:970/250"><img src="../images/banner-970x250.jpg" alt="970 by 250 billboard" loading="lazy"></div>
-<div class="ad" style="width:437px;aspect-ratio:728/90"><img src="../images/banner-728x90.jpg" alt="728 by 90 leaderboard" loading="lazy"></div>
-<div class="ad" style="width:180px;aspect-ratio:300/600"><img src="../images/banner-300x600.jpg" alt="300 by 600 half page" loading="lazy"></div>
-<div class="ad" style="width:96px;aspect-ratio:160/600"><img src="../images/banner-160x600.jpg" alt="160 by 600 skyscraper" loading="lazy"></div>
-<div class="ad" style="width:180px;aspect-ratio:300/250"><img src="../images/banner-300x250.jpg" alt="300 by 250 medium rectangle" loading="lazy"></div>
-<div class="ad" style="width:202px;aspect-ratio:336/280"><img src="../images/banner-336x280.jpg" alt="336 by 280 large rectangle" loading="lazy"></div>
-<div class="ad" style="width:192px;aspect-ratio:320/100"><img src="../images/banner-320x100.jpg" alt="320 by 100 large mobile banner" loading="lazy"></div>
-<div class="ad" style="width:192px;aspect-ratio:320/50"><img src="../images/banner-320x50.jpg" alt="320 by 50 mobile banner" loading="lazy"></div>
+<p class="p narrow">Real output from a single upload, shown at reduced scale. Field &amp; Co. is a sample brand made for this case study.</p>
 </div>
+<div class="ads">
+<figure class="ad" style="width:582px;aspect-ratio:970/250"><img src="../images/banner-970x250.jpg" width="840" height="218" alt="Field and Co. sample banner at 970 by 250, the billboard size" loading="lazy"></figure>
+<figure class="ad" style="width:437px;aspect-ratio:728/90"><img src="../images/banner-728x90.jpg" width="840" height="106" alt="Field and Co. sample banner at 728 by 90, the leaderboard size" loading="lazy"></figure>
+<figure class="ad" style="width:180px;aspect-ratio:300/600"><img src="../images/banner-300x600.jpg" width="340" height="682" alt="Field and Co. sample banner at 300 by 600, the half page size" loading="lazy"></figure>
+<figure class="ad" style="width:96px;aspect-ratio:160/600"><img src="../images/banner-160x600.jpg" width="184" height="682" alt="Field and Co. sample banner at 160 by 600, the skyscraper size" loading="lazy"></figure>
+<figure class="ad" style="width:180px;aspect-ratio:300/250"><img src="../images/banner-300x250.jpg" width="600" height="502" alt="Field and Co. sample banner at 300 by 250, the medium rectangle" loading="lazy"></figure>
+<figure class="ad" style="width:202px;aspect-ratio:336/280"><img src="../images/banner-336x280.jpg" width="672" height="562" alt="Field and Co. sample banner at 336 by 280, the large rectangle" loading="lazy"></figure>
+<figure class="ad" style="width:192px;aspect-ratio:320/100"><img src="../images/banner-320x100.jpg" width="640" height="202" alt="Field and Co. sample banner at 320 by 100, the large mobile banner" loading="lazy"></figure>
+<figure class="ad" style="width:192px;aspect-ratio:320/50"><img src="../images/banner-320x50.jpg" width="640" height="102" alt="Field and Co. sample banner at 320 by 50, the mobile banner" loading="lazy"></figure>
+</div>
+<p class="cap" style="text-align:left;margin-left:0">Eight of the 16 sizes. Notice the headline stacking on tall sizes, and the button dropping out of the 320×50 strip where there is no room for it.</p>
 </div></section>
 
 <section class="sec"><div class="wrap">
@@ -98,9 +138,29 @@
 </div>
 </div></section>
 
+<section class="sec alt"><div class="wrap">
+<div class="intro">
+<p class="eb">Process</p>
+<h2 class="h2 narrow">Layout rules in, reviewed software out.</h2>
+<p class="p narrow">I design and direct, and Claude Code writes the code. Every change runs through the same loop, and nothing merges until I've seen it working.</p>
+</div>
+<ol class="steps">
+<li><h3 class="ct">I write the spec</h3><p class="cp">Product specs, layout rules from my Figma banner system, and acceptance criteria that say exactly what done looks like.</p></li>
+<li><h3 class="ct">Claude Code builds on a branch</h3><p class="cp">Each change is built on its own branch, so the working version is never touched while work is in progress.</p></li>
+<li><h3 class="ct">I review a deploy preview</h3><p class="cp">Every branch gets a working copy at its own link. I upload real assets and check every size the way a designer would.</p></li>
+<li class="gate"><h3 class="ct">Then it merges</h3><p class="cp">Only after I sign off does the change merge. The legibility checks came from the same idea: catch problems before export, not after.</p></li>
+</ol>
+<div class="spec">
+<div class="lbl">From a real spec</div>
+<blockquote class="ph-text">[PLACEHOLDER: 2 to 4 lines quoted from one of your real BannerFactory specs, for example a layout rule or the legibility check criteria. Keep it brand-neutral.]</blockquote>
+</div>
+</div></section>
+
 <section class="sec"><div class="wrap">
+<div class="intro">
 <p class="eb">Roadmap</p>
-<h2 class="h2" style="margin-bottom:40px">From an internal tool to a product for lean brand teams.</h2>
+<h2 class="h2">From an internal tool to a product for lean brand teams.</h2>
+</div>
 <div class="g4">
 <div class="card"><h3 class="ct flush">Brand admin portal</h3><p class="cp">Approved taglines and assets in one place, so every banner starts on-brand.</p></div>
 <div class="card"><h3 class="ct flush">Shared team library</h3><p class="cp">Shared accounts, templates and asset library for a whole creative team.</p></div>
@@ -109,17 +169,18 @@
 </div>
 <div class="card big hl" style="margin-top:40px">
 <p class="eb">Impact</p>
-<p style="font:500 24px/1.4 'Space Grotesk',sans-serif;margin:0">[Add a real result here, e.g. hours saved per campaign or sizes produced per upload]</p>
+<p class="ph-text" style="font:500 clamp(20px,2.4vw,24px)/1.4 'Space Grotesk',sans-serif;margin:0">[PLACEHOLDER: a real result, for example hours saved per campaign or sizes produced per upload]</p>
 </div>
 </div></section>
 
-<section class="sec" style="padding-bottom:96px"><div class="wrap next">
+<section class="sec end"><div class="wrap next">
 <div>
 <p class="eb dim">Previous case study</p>
 <a class="big" href="../muscle-memory/">← Muscle Memory</a>
 </div>
 <a class="btn" href="mailto:heytim@timimbo.com">Let's talk</a>
 </div></section>
+</main>
 
 <footer><div class="wrap">
 <span>© TIMIMBO LLC</span>
