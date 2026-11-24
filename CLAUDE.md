@@ -1,0 +1,101 @@
+# TIMIMBO Product Portfolio - Working Agreement for Claude Code
+
+## What this is
+
+A static microsite of product design case studies for Tim Imbordino
+(TIMIMBO LLC). It is hosted on Netlify and linked from timimbo.com (Wix).
+Target address: a subdomain such as work.timimbo.com, set up with a CNAME
+record in Wix DNS.
+
+Pages:
+- site/index.html: home, one card per case study
+- site/muscle-memory/index.html: Muscle Memory + America's Gym
+- site/bannerfactory/index.html: BannerFactory
+- site/styles.css: one shared stylesheet. The BannerFactory page sets
+  `<body class="bf">`, which switches the accent from ember to violet.
+- site/images/: every visual on the site
+
+Plain HTML and CSS only. No framework, no build step, no JavaScript is
+needed. netlify.toml publishes the `site` folder as-is.
+
+## Rules
+
+- Never use em dashes anywhere: copy, code comments, commit messages,
+  or chat replies to Tim.
+- Tim is a designer, not a developer. Report in short plain-language
+  bullets, framed as what he needs to do next.
+- No invented stats, results or quotes. A missing fact gets a visible
+  [PLACEHOLDER] and gets flagged to Tim.
+- Every image needs real alt text. Keep pages working at 375px wide with
+  no sideways scrolling.
+- Work on a branch, open a pull request, and give Tim the Netlify deploy
+  preview link. Merges are Tim's call.
+
+## Design tokens (borrowed from the Muscle Memory app)
+
+- Background #0D1015, alt section #10141A, surface #161B22, raised
+  #1D242E, line #2A3340
+- Text #EDF1F7, muted #93A0B4, faint #5B6779
+- Ember #FF6B3D (Muscle Memory accent), glacier #43C6E8, green #5BD08B,
+  gold #E8B843 (personal records only), violet #9B87FF (BannerFactory
+  accent)
+- Type: Space Grotesk headings, Inter body, Barlow Condensed for numbers
+  and the Muscle Memory type sample (Google Fonts)
+
+## Facts the copy must stay true to
+
+Muscle Memory (repo mymusclememory/imaginative-kashata-2b43c9, live at
+mymusclememory.app):
+- Free, no paywall. A Stripe Pro tier was built in Sep 2026 and removed
+  in Nov 2026. Do not mention pricing.
+- Sign-in is a one-time email code (OTP), not a magic link. Signup is
+  invite only.
+- Local-first: workouts live on the device; cloud backup syncs workouts
+  and body weight.
+- Photo import is read by Claude server-side and needs sign-in. Pasted
+  text, .txt and .pdf are parsed on the phone. The AI parses, it never
+  authors.
+- Recall coaching notes are deterministic, no AI.
+- America's Gym (Wheeling, IL) is the pilot facility for the gym layer.
+  The pitch prototype is its own repo, mymusclememory/AmericasGym (one
+  index.html, live at americasgym.netlify.app), in the gym's brand: red
+  #C10230, blue #002F87, amber #FFAB4D. Member, owner and admin views; the
+  owner dashboard is fake on purpose. Videos are stand-ins.
+
+BannerFactory (repo mymusclememory/NOWbannerflow):
+- Next.js, TypeScript, Tailwind, Konva. Built by Claude Code from Tim's
+  specs.
+- 16 standard ad sizes (Amazon DSP + IAB) from one upload, with
+  per-size legibility checks.
+- The name on the site is BannerFactory (Tim's call), even though the
+  app's own UI currently says "OnSpec".
+- Keep it brand-neutral. Do not show NOW Foods names, products, logos or
+  the purple. NOW does not know about this tool. Screenshots use
+  "Field & Co.", a made-up sample brand (capture/assets).
+
+## Where the visuals came from (capture/)
+
+All screenshots are real screens from the two apps, run locally with
+Playwright and Chrome:
+- seed.py writes seed.json: 7 weeks of sample PHAT training history,
+  body weight and cycle state for Muscle Memory's localStorage.
+- mm.py and mm2.py serve the Muscle Memory repo on localhost:8101, load
+  the seed, and capture the workout list, session, superset, History,
+  Progress and the import flow at 393x852 @3x.
+- bf3.py drives BannerFactory on localhost:8102 (`next build && next
+  start`), uploads the Field & Co. sample assets, and captures the
+  editor, the list view and each banner canvas.
+- ag.py serves the AmericasGym repo on localhost:8104 and captures the
+  start screen, the floor and a machine tutorial (#/equipment/<slug>).
+- site.py renders the finished site at 1440 and 390 wide to check it.
+Outputs go to capture/out and capture/export (git-ignored). Images were
+then resized to 786px wide for phones and 2000px for desktop, saved as
+JPEG, and copied into site/images.
+The scripts were written for a one-off session: adjust ports, the
+Chrome path and repo locations before rerunning.
+
+## Open items
+
+1. BannerFactory "Impact" line is a placeholder until Tim has a real
+   result.
+2. Domain: work.timimbo.com (or similar) on Netlify, CNAME in Wix DNS.

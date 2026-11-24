@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BannerFactory case study | TIMIMBO</title>
+<meta name="description" content="BannerFactory: one upload in, a full set of on-brand display banners out. Designed and built with AI.">
+<meta property="og:title" content="BannerFactory case study | TIMIMBO">
+<meta property="og:description" content="One upload in, a full set of on-brand display banners out.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body class="bf">
+
+<nav class="nav"><div class="wrap">
+<a class="logo" href="https://timimbo.com" target="_top">TIMIMBO</a>
+<div class="links">
+<a href="https://timimbo.com" target="_top">Work</a>
+<a class="on" href="../">Product</a>
+<a href="mailto:heytim@timimbo.com">Contact</a>
+</div>
+</div></nav>
+
+<header class="top wrap">
+<p class="eb">Case study 02 · Product design + AI</p>
+<h1 class="hero">BannerFactory</h1>
+<p class="lede">One upload in, a full set of on-brand display banners out. A web app I designed and built to take the repetitive resizing work off a CPG creative team.</p>
+<div class="meta">
+<div><div class="k">Role</div><div class="v">Product designer, product owner</div></div>
+<div><div class="k">Output</div><div class="v">16 standard ad sizes per upload</div></div>
+<div><div class="k">Stack</div><div class="v">Next.js, TypeScript, Tailwind, Konva</div></div>
+<div><div class="k">Built with</div><div class="v">Claude Code, from my specs</div></div>
+</div>
+</header>
+
+<div class="wrap" style="padding-bottom:120px">
+<figure class="frame"><img src="../images/bf-editor.jpg" alt="BannerFactory editor: layer panel on the left, the full banner set laid out by size group"></figure>
+</div>
+
+<section class="sec"><div class="wrap g2">
+<div>
+<p class="eb">The problem</p>
+<h2 class="h2">Every campaign meant rebuilding the same banner fifteen times.</h2>
+<p class="p">Display campaigns need a banner for every placement, from a skinny 320×50 mobile strip to a 970×250 billboard. Designers were hand-resizing each one, re-checking logos, badges and legal copy every time. Skilled people, spending hours on production instead of ideas.</p>
+</div>
+<div>
+<p class="eb">My approach</p>
+<h2 class="h2">Turn the design system into software.</h2>
+<p class="p">I'd already built a multi-size banner design system in Figma. BannerFactory encodes those layout rules in code, so the system makes the decisions a designer used to make by hand: where the product sits, how the headline scales, where the badge goes.</p>
+</div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+<p class="eb">How it works</p>
+<h2 class="h2" style="margin-bottom:48px">Three steps from assets to export.</h2>
+<div class="g3">
+<div class="card"><div class="step">1</div><h3 class="ct">Upload once</h3><p class="cp">Product image, logo, headline, and certification badges like Non-GMO or Informed Sport, plus a brand category.</p></div>
+<div class="card"><div class="step">2</div><h3 class="ct">Auto-layout every size</h3><p class="cp">A canvas layout engine places each element per size using rules from the design system. Preview everything at once and fine-tune any one.</p></div>
+<div class="card"><div class="step">3</div><h3 class="ct">Batch export</h3><p class="cp">Download the full set as one ZIP, named and sized for upload to Amazon DSP or any other ad platform.</p></div>
+</div>
+<figure class="frame mt"><img src="../images/bf-checks.jpg" alt="List view showing every size with automatic legibility checks" loading="lazy"></figure>
+<p class="cap">Every size is checked as you work. The tool flags any size where text had to shrink or the button got too small, before anything is exported.</p>
+</div></section>
+
+<section class="sec alt"><div class="wrap">
+<p class="eb">One asset, every placement</p>
+<h2 class="h2 narrow">The same creative, laid out for each size by rule.</h2>
+<p class="p narrow" style="margin-bottom:48px">Real output from a single upload, shown at reduced scale. Field &amp; Co. is a sample brand made for this case study.</p>
+<div class="ads">
+<div class="ad" style="width:582px;aspect-ratio:970/250"><img src="../images/banner-970x250.jpg" alt="970 by 250 billboard" loading="lazy"></div>
+<div class="ad" style="width:437px;aspect-ratio:728/90"><img src="../images/banner-728x90.jpg" alt="728 by 90 leaderboard" loading="lazy"></div>
+<div class="ad" style="width:180px;aspect-ratio:300/600"><img src="../images/banner-300x600.jpg" alt="300 by 600 half page" loading="lazy"></div>
+<div class="ad" style="width:96px;aspect-ratio:160/600"><img src="../images/banner-160x600.jpg" alt="160 by 600 skyscraper" loading="lazy"></div>
+<div class="ad" style="width:180px;aspect-ratio:300/250"><img src="../images/banner-300x250.jpg" alt="300 by 250 medium rectangle" loading="lazy"></div>
+<div class="ad" style="width:202px;aspect-ratio:336/280"><img src="../images/banner-336x280.jpg" alt="336 by 280 large rectangle" loading="lazy"></div>
+<div class="ad" style="width:192px;aspect-ratio:320/100"><img src="../images/banner-320x100.jpg" alt="320 by 100 large mobile banner" loading="lazy"></div>
+<div class="ad" style="width:192px;aspect-ratio:320/50"><img src="../images/banner-320x50.jpg" alt="320 by 50 mobile banner" loading="lazy"></div>
+</div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+<p class="eb">How AI is used</p>
+<h2 class="h2 narrow">A designer shipping software, with AI doing the heavy lifting in code.</h2>
+<div class="g2 tight mt">
+<div class="card big">
+<div class="lbl">Building it</div>
+<h3 class="ct">Spec-driven development</h3>
+<p class="cp">I don't write the code. I write precise product specs, layout rules and acceptance criteria, then direct Claude Code to build them and review the result. Design thinking stays the bottleneck, not engineering hours.</p>
+</div>
+<div class="card big">
+<div class="lbl">Where it's going</div>
+<h3 class="ct">Creative that learns from results</h3>
+<p class="cp">Next: import ad performance data so the tool can recommend which creative to run, with built-in A/B testing to prove it.</p>
+</div>
+</div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+<p class="eb">Roadmap</p>
+<h2 class="h2" style="margin-bottom:40px">From an internal tool to a product for lean brand teams.</h2>
+<div class="g4">
+<div class="card"><h3 class="ct flush">Brand admin portal</h3><p class="cp">Approved taglines and assets in one place, so every banner starts on-brand.</p></div>
+<div class="card"><h3 class="ct flush">Shared team library</h3><p class="cp">Shared accounts, templates and asset library for a whole creative team.</p></div>
+<div class="card"><h3 class="ct flush">Partner portal</h3><p class="cp">Retailers and vendors pull brand-approved materials themselves.</p></div>
+<div class="card"><h3 class="ct flush">White label</h3><p class="cp">A version for CPG companies with limited design resources.</p></div>
+</div>
+<div class="card big hl" style="margin-top:40px">
+<p class="eb">Impact</p>
+<p style="font:500 24px/1.4 'Space Grotesk',sans-serif;margin:0">[Add a real result here, e.g. hours saved per campaign or sizes produced per upload]</p>
+</div>
+</div></section>
+
+<section class="sec" style="padding-bottom:96px"><div class="wrap next">
+<div>
+<p class="eb dim">Previous case study</p>
+<a class="big" href="../muscle-memory/">← Muscle Memory</a>
+</div>
+<a class="btn" href="mailto:heytim@timimbo.com">Let's talk</a>
+</div></section>
+
+<footer><div class="wrap">
+<span>© TIMIMBO LLC</span>
+<a href="mailto:heytim@timimbo.com">heytim@timimbo.com</a>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+import asyncio
+from playwright.async_api import async_playwright
+O="out/"; A="assets/"
+async def main():
+    async with async_playwright() as p:
+        b=await p.chromium.launch(executable_path="/usr/bin/google-chrome")
+        c=await b.new_context(viewport={"width":1440,"height":900},device_scale_factor=2)
+        pg=await c.new_page(); pg.on("pageerror",lambda e:print("ERR",e))
+        await pg.goto("http://localhost:8102/"); await pg.wait_for_timeout(3000)
+        fi=await pg.eval_on_selector_all("input[type=file]",'els=>els.map(e=>(e.getAttribute("aria-label")||e.name||e.id||"")+"|"+e.accept)')
+        print("files",fi)
+        async def layer(n): await pg.get_by_text(n,exact=True).first.click(); await pg.wait_for_timeout(500)
+        await layer("Headline"); await pg.locator("textarea:visible").first.fill("Greens, simplified"); await pg.wait_for_timeout(300)
+        await layer("Subhead"); await pg.locator("textarea:visible").first.fill("One scoop. 12 superfoods."); await pg.wait_for_timeout(300)
+        await layer("Product Render")
+        await pg.locator("input[type=file]").first.set_input_files(A+"product.png"); await pg.wait_for_timeout(1500)
+        await layer("Logo"); await pg.locator("input[type=file]").first.set_input_files(A+"logo.png"); await pg.wait_for_timeout(1500)
+        await pg.screenshot(path=O+"bf_qa.png")
+        await pg.keyboard.press("Escape"); await pg.wait_for_timeout(300)
+        x=pg.locator("button[aria-label*='lose' i]:visible"); n=await x.count(); print("close btns",n)
+        if n: await x.last.click(); await pg.wait_for_timeout(400)
+        await pg.get_by_role("button",name="Zoom to fit").click(); await pg.wait_for_timeout(1200)
+        await pg.screenshot(path=O+"bf_grid.png")
+        await pg.get_by_role("button",name="List").click(); await pg.wait_for_timeout(1500)
+        await pg.screenshot(path=O+"bf_list.png")
+        await pg.get_by_role("button",name="Grid").click(); await pg.wait_for_timeout(1500)
+        cv=pg.locator("canvas"); n=await cv.count(); print("canvases",n)
+        for i in range(n):
+            el=cv.nth(i); await el.scroll_into_view_if_needed(); await pg.wait_for_timeout(200)
+            bb=await el.bounding_box()
+            lab=await el.evaluate("e=>{let n=e;for(let k=0;k<12&&n;k++){n=n.parentElement;const m=n&&n.innerText.match(/(\\d+)\\s*[x×]\\s*(\\d+)/);if(m)return m[1]+'x'+m[2]}return 'u'+Math.random()}")
+            await el.screenshot(path=f"export/{lab}.png"); print(lab, int(bb['width']), int(bb['height']))
+        print([t for t in await pg.eval_on_selector_all("button",'els=>els.map(e=>(e.getAttribute("aria-label")||e.innerText).trim()).filter(Boolean)')][:12])
+        await b.close()
+asyncio.run(main())
