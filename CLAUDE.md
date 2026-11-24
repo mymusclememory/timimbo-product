@@ -14,9 +14,27 @@ Pages:
 - site/styles.css: one shared stylesheet. The BannerFactory page sets
   `<body class="bf">`, which switches the accent from ember to violet.
 - site/images/: every visual on the site
+- site/404.html: not-found page (Netlify serves it automatically)
+- site/motion.js: the only script. A few lines that fade and rise
+  sections in on scroll. It does nothing for visitors who ask for
+  reduced motion.
+- site/favicon.svg, favicon-32.png, apple-touch-icon.png: icons
+- site/images/og-*.jpg: 1200x630 share images (Open Graph and Twitter)
 
-Plain HTML and CSS only. No framework, no build step, no JavaScript is
-needed. netlify.toml publishes the `site` folder as-is.
+Plain HTML and CSS, plus motion.js. No framework, no build step.
+netlify.toml publishes the `site` folder as-is.
+
+## Page patterns
+
+- Screenshot callouts: put the image in `<div class="phone">` or
+  `<div class="frame">`, add `<span class="hot" style="--t;--l;--w;--h">`
+  boxes (percent of the image) with a numbered `.pin`, and explain each
+  number in `<ol class="notes">` below. Add class `r` to move the pin
+  to the right corner. Hotspots are `aria-hidden`; the notes carry the
+  meaning.
+- Share tags point at https://work.timimbo.com. If the final domain
+  changes, update canonical, og:url, og:image and twitter:image on
+  every page.
 
 ## Rules
 
@@ -88,6 +106,10 @@ Playwright and Chrome:
 - ag.py serves the AmericasGym repo on localhost:8104 and captures the
   start screen, the floor and a machine tutorial (#/equipment/<slug>).
 - site.py renders the finished site at 1440 and 390 wide to check it.
+- review.js (Node, Playwright) serves site/ and renders every page at
+  1440, 1024, 390 and 375 wide, and reports any sideways overflow.
+- share.js (Node, Playwright) rebuilds the og-*.jpg share images and
+  the PNG icons from the screenshots and favicon.svg.
 Outputs go to capture/out and capture/export (git-ignored). Images were
 then resized to 786px wide for phones and 2000px for desktop, saved as
 JPEG, and copied into site/images.
@@ -99,3 +121,6 @@ Chrome path and repo locations before rerunning.
 1. BannerFactory "Impact" line is a placeholder until Tim has a real
    result.
 2. Domain: work.timimbo.com (or similar) on Netlify, CNAME in Wix DNS.
+   Share images only work once this domain is live (see Page patterns).
+3. "From a real spec" excerpts on both case studies are placeholders
+   until Tim supplies real spec lines.
