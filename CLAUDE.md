@@ -67,8 +67,10 @@ netlify.toml publishes the `site` folder as-is.
 - Ember #FF6B3D (Muscle Memory accent), glacier #43C6E8, green #5BD08B,
   gold #E8B843 (personal records only), violet #9B87FF (BannerFactory
   accent)
-- Type: Space Grotesk headings, Inter body, Barlow Condensed for numbers
-  and the Muscle Memory type sample (Google Fonts)
+- Type: the main portfolio UI (home and 404, `<body class="ui-inter">`)
+  is Inter only, and those pages load only Inter. Case study pages keep
+  Space Grotesk headings, Inter body and Barlow Condensed for numbers
+  (Google Fonts); do not change their type.
 
 ## Facts the copy must stay true to
 
