@@ -158,6 +158,8 @@ footer a{color:var(--muted);text-decoration:none}
 .proj:hover{border-color:var(--pa,var(--ember));transform:translateY(-4px);opacity:1}
 .proj .cover{height:360px;overflow:hidden;background:var(--raised)}
 .proj .cover img{width:100%;height:100%;object-fit:cover;object-position:top left}
+.proj .cover.whole{background:#fff;display:flex;align-items:center}
+.proj .cover.whole img{height:auto;object-fit:contain}
 .proj .cover.duo{display:flex;justify-content:center;gap:16px;padding:32px 32px 0}
 .proj .cover.duo img{width:44%;height:auto;border-radius:20px 20px 0 0;border:1px solid var(--line);border-bottom:0}
 .proj .body{padding:32px}
