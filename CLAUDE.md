@@ -10,7 +10,7 @@ record in Wix DNS.
 Pages:
 - site/index.html: home, one card per case study, then a "CPG brand
   work" section (NOW Experts / Be You NOW, NOW Solutions, True Citrus,
-  Nuzest). Tiles open a gallery dialog (site/cpg.js) and fall back to
+  Nuzest, N2 Water). Tiles open a gallery dialog (site/cpg.js) and fall back to
   links to the matching timimbo.com page. Images in site/images/cpg/.
 - site/muscle-memory/index.html: Muscle Memory + America's Gym
 - site/bannerfactory/index.html: BannerFactory
@@ -62,7 +62,8 @@ netlify.toml publishes the `site` folder as-is.
 
 - Background #0D1015, alt section #10141A, surface #161B22, raised
   #1D242E, line #2A3340
-- Text #EDF1F7, muted #93A0B4, faint #5B6779
+- Text #EDF1F7, muted #93A0B4, faint #7D899B (lightened from #5B6779 in
+  Nov 2026 so small text passes 4.5:1 contrast)
 - Ember #FF6B3D (Muscle Memory accent), glacier #43C6E8, green #5BD08B,
   gold #E8B843 (personal records only), violet #9B87FF (BannerFactory
   accent)
@@ -121,9 +122,21 @@ Amazon Creative Design System"):
   the assets/logo-*.svg files and their positions as they are.
 
 CPG brand work (home page section):
-- Copy and images come from Tim's saved timimbo.com pages in Google
-  Drive (folder "timimbo.com"). Keep the project descriptions in his
-  words. N2 Water is not included yet (no copy or web images).
+- Copy and images come from the live timimbo.com project pages (the
+  session's network allows www.timimbo.com and static.wixstatic.com).
+  Keep the project descriptions in his words. Each project has
+  <id>-1..6.jpg (max 1600px), <id>-N-t.jpg thumbnails for the dialog,
+  and cover-<id>.jpg plus a -700 variant.
+
+## Performance and touch targets
+
+- Large images ship with smaller variants (-420, -700, -800, -1200)
+  wired up with srcset/sizes, so phones download small files. Add a
+  variant and srcset for any new large image.
+- netlify.toml sets cache headers: one week for images and exported
+  assets, one hour for CSS and JS.
+- Buttons and links keep a touch area of at least 44px tall (menu,
+  footer, pills); the guide's pill tabs are 40px.
 
 ## Where the visuals came from (capture/)
 

@@ -9,7 +9,8 @@
   var list = [], i = 0, opener = null;
   function show(n) {
     i = (n + list.length) % list.length;
-    img.src = list[i][0]; img.alt = list[i][1];
+    img.src = list[i][0]; img.alt = list[i][2];
+    var nx = list[(i + 1) % list.length]; if (nx) { var pre = new Image(); pre.src = nx[0]; }
     count.textContent = (i + 1) + ' / ' + list.length;
     [].forEach.call(thumbs.children, function (b, k) { if (k === i) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current'); });
   }
@@ -27,7 +28,7 @@
       thumbs.innerHTML = '';
       list.forEach(function (im, k) {
         var b = document.createElement('button'); b.type = 'button'; b.setAttribute('aria-label', 'Show image ' + (k + 1) + ' of ' + list.length);
-        var ti = document.createElement('img'); ti.src = im[0]; ti.alt = ''; b.appendChild(ti);
+        var ti = document.createElement('img'); ti.src = im[1]; ti.alt = ''; ti.width = 64; ti.height = 48; b.appendChild(ti);
         b.addEventListener('click', function () { show(k); });
         thumbs.appendChild(b);
       });
