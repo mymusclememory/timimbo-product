@@ -55,6 +55,22 @@ const cards = {
     await pg.screenshot({ path: path.join(site, 'images', name + '.jpg'), type: 'jpeg', quality: 86 });
     console.log('wrote', name);
   }
+  // NOW Creative Guide: render the real page cover over http (the logo masks need it)
+  const http = require('node:http');
+  const types = { '.html': 'text/html', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.jpg': 'image/jpeg', '.png': 'image/png' };
+  const server = http.createServer((req, res) => {
+    let p = decodeURIComponent(req.url.split('?')[0]); if (p.endsWith('/')) p += 'index.html';
+    const f = path.join(site, p);
+    if (!fs.existsSync(f)) { res.writeHead(404); return res.end(); }
+    res.writeHead(200, { 'content-type': types[path.extname(f)] || 'application/octet-stream' }); fs.createReadStream(f).pipe(res);
+  }).listen(8107);
+  await pg.goto('http://localhost:8107/now-creative-guide/', { waitUntil: 'networkidle' });
+  await pg.addStyleTag({ content: '.nav,.g-meta,.skip{display:none!important}.nowg .gw{max-width:none!important}.nowg .g-cover{min-height:630px!important;height:630px;padding:64px 80px 72px!important;justify-content:space-between}.g-cover .t{font-size:100px!important;margin:0 0 20px!important}body::after{content:"";position:fixed;left:0;right:0;top:622px;height:8px;background:#fd852e}' });
+  await pg.evaluate(() => document.fonts.ready);
+  await pg.screenshot({ path: path.join(site, 'images', 'og-now-creative-guide.jpg'), type: 'jpeg', quality: 88 });
+  console.log('wrote og-now-creative-guide');
+  server.close();
+
   const svg = 'file://' + path.join(site, 'favicon.svg');
   for (const [name, size] of [['favicon-32.png', 32], ['apple-touch-icon.png', 180]]) {
     await pg.setViewportSize({ width: size, height: size });

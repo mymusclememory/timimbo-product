@@ -11,17 +11,21 @@ Pages:
 - site/index.html: home, one card per case study
 - site/muscle-memory/index.html: Muscle Memory + America's Gym
 - site/bannerfactory/index.html: BannerFactory
+- site/now-creative-guide/: NOW Amazon Creative Guide, an interactive
+  rebuild of Tim's Figma design system. Its own light theme in Nunito
+  (guide.css), its own script (guide.js) and the logo and icon SVGs
+  exported from Figma (assets/).
 - site/styles.css: one shared stylesheet. The BannerFactory page sets
   `<body class="bf">`, which switches the accent from ember to violet.
 - site/images/: every visual on the site
 - site/404.html: not-found page (Netlify serves it automatically)
-- site/motion.js: the only script. A few lines that fade and rise
-  sections in on scroll. It does nothing for visitors who ask for
-  reduced motion.
+- site/motion.js: a few lines that fade and rise sections in on
+  scroll. It does nothing for visitors who ask for reduced motion.
+  The only other script is site/now-creative-guide/guide.js.
 - site/favicon.svg, favicon-32.png, apple-touch-icon.png: icons
 - site/images/og-*.jpg: 1200x630 share images (Open Graph and Twitter)
 
-Plain HTML and CSS, plus motion.js. No framework, no build step.
+Plain HTML and CSS, plus motion.js and guide.js. No framework, no build step.
 netlify.toml publishes the `site` folder as-is.
 
 ## Page patterns
@@ -91,6 +95,19 @@ BannerFactory (repo mymusclememory/NOWbannerflow):
   the purple. NOW does not know about this tool. Screenshots use
   "Field & Co.", a made-up sample brand (capture/assets).
 
+NOW Amazon Creative Guide (Figma file 8Z97hmdkGYXqRQJKFAgOlT, "NOW
+Amazon Creative Design System"):
+- Tim chose to show it with full NOW branding (Nov 2026). This is the
+  only page that may show NOW names, logos or colors.
+- Never link it to BannerFactory or suggest NOW knows about that tool.
+  BannerFactory stays brand-neutral.
+- Do not publish from the file: internal email addresses, the
+  reference screenshots of NOW or partner marketing, ASINs, or review
+  status notes from the A+ template.
+- Tokens, rules, component specs and copy on the page come straight
+  from the file. The NOW logo is rebuilt from its Figma layers, so keep
+  the assets/logo-*.svg files and their positions as they are.
+
 ## Where the visuals came from (capture/)
 
 All screenshots are real screens from the two apps, run locally with
@@ -109,7 +126,8 @@ Playwright and Chrome:
 - review.js (Node, Playwright) serves site/ and renders every page at
   1440, 1024, 390 and 375 wide, and reports any sideways overflow.
 - share.js (Node, Playwright) rebuilds the og-*.jpg share images and
-  the PNG icons from the screenshots and favicon.svg.
+  the PNG icons from the screenshots and favicon.svg. The NOW guide's
+  share image is a render of that page's cover.
 Outputs go to capture/out and capture/export (git-ignored). Images were
 then resized to 786px wide for phones and 2000px for desktop, saved as
 JPEG, and copied into site/images.
@@ -124,3 +142,4 @@ Chrome path and repo locations before rerunning.
    Share images only work once this domain is live (see Page patterns).
 3. "From a real spec" excerpts on both case studies are placeholders
    until Tim supplies real spec lines.
+4. NOW Creative Guide: role, problem and impact are placeholders.
