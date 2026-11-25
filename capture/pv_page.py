@@ -150,6 +150,7 @@ page = f'''<!doctype html>
 <a class="logo" href="https://timimbo.com" target="_top">TIMIMBO</a>
 <div class="links">
 <a href="../">Product</a>
+<a href="../design/">Design</a>
 <a class="on" href="./" aria-current="page">Photo + Video</a>
 <a href="mailto:heytim@timimbo.com">Contact</a>
 </div>

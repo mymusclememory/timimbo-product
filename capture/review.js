@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
   res.writeHead(200, { 'content-type': types[path.extname(f)] || 'application/octet-stream' });
   fs.createReadStream(f).pipe(res);
 }).listen(8105);
-const pages = [['', 'home'], ['muscle-memory/', 'mm'], ['bannerfactory/', 'bf'], ['now-creative-guide/', 'now'], ['photo-video/', 'pv'], ['nope/', '404']];
+const pages = [['', 'home'], ['muscle-memory/', 'mm'], ['bannerfactory/', 'bf'], ['now-creative-guide/', 'now'], ['photo-video/', 'pv'], ['design/', 'design'], ['nope/', '404']];
 (async () => {
 const b = await chromium.launch();
 for (const w of [1440, 1024, 390, 375]) {
