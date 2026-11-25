@@ -2,7 +2,7 @@
 // Does nothing for visitors who ask for reduced motion, or in old browsers.
 (function () {
   if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  var els = document.querySelectorAll('header.top > *, .lead-shots .fig, .projects .proj, .sec .wrap > *');
+  var els = document.querySelectorAll('header.top > *, .lead-shots .fig, .projects .proj, .sec .wrap > *, .cpg-head, .cpg-tile');
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (e) {
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }

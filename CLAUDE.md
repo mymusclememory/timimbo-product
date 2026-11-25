@@ -8,7 +8,10 @@ Target address: a subdomain such as work.timimbo.com, set up with a CNAME
 record in Wix DNS.
 
 Pages:
-- site/index.html: home, one card per case study
+- site/index.html: home, one card per case study, then a "CPG brand
+  work" section (NOW Experts / Be You NOW, NOW Solutions, True Citrus,
+  Nuzest). Tiles open a gallery dialog (site/cpg.js) and fall back to
+  links to the matching timimbo.com page. Images in site/images/cpg/.
 - site/muscle-memory/index.html: Muscle Memory + America's Gym
 - site/bannerfactory/index.html: BannerFactory
 - site/now-creative-guide/: NOW Amazon Creative Guide, an interactive
@@ -21,11 +24,13 @@ Pages:
 - site/404.html: not-found page (Netlify serves it automatically)
 - site/motion.js: a few lines that fade and rise sections in on
   scroll. It does nothing for visitors who ask for reduced motion.
-  The only other script is site/now-creative-guide/guide.js.
+  The other scripts are site/cpg.js (home page CPG gallery) and
+  site/now-creative-guide/guide.js.
 - site/favicon.svg, favicon-32.png, apple-touch-icon.png: icons
 - site/images/og-*.jpg: 1200x630 share images (Open Graph and Twitter)
 
-Plain HTML and CSS, plus motion.js and guide.js. No framework, no build step.
+Plain HTML and CSS, plus motion.js, cpg.js and guide.js. No framework, no
+build step.
 netlify.toml publishes the `site` folder as-is.
 
 ## Page patterns
@@ -97,8 +102,9 @@ BannerFactory (repo mymusclememory/NOWbannerflow):
 
 NOW Amazon Creative Guide (Figma file 8Z97hmdkGYXqRQJKFAgOlT, "NOW
 Amazon Creative Design System"):
-- Tim chose to show it with full NOW branding (Nov 2026). This is the
-  only page that may show NOW names, logos or colors.
+- Tim chose to show it with full NOW branding (Nov 2026). NOW names,
+  logos and colors may appear on this page and in the home page's CPG
+  brand work section, and nowhere else.
 - Never link it to BannerFactory or suggest NOW knows about that tool.
   BannerFactory stays brand-neutral.
 - Do not publish from the file: internal email addresses, the
@@ -113,6 +119,11 @@ Amazon Creative Design System"):
   mobile), saved in now-creative-guide/build/. Only the Product Sets
   may be shown; never the References frame. The NOW logo is rebuilt from its Figma layers, so keep
   the assets/logo-*.svg files and their positions as they are.
+
+CPG brand work (home page section):
+- Copy and images come from Tim's saved timimbo.com pages in Google
+  Drive (folder "timimbo.com"). Keep the project descriptions in his
+  words. N2 Water is not included yet (no copy or web images).
 
 ## Where the visuals came from (capture/)
 
