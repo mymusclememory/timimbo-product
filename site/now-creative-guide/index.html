@@ -52,41 +52,105 @@
 <p class="sub">Design system for Amazon banners, listing images and A+ content.</p>
 <div class="g-meta">
 <div><div class="k">Case study 03</div><div class="v">Brand design system</div></div>
-<div><div class="k">Role</div><div class="v ph">[PLACEHOLDER: your role on this project]</div></div>
+<div><div class="k">Role</div><div class="v">Creative Director, Design Strategy</div></div>
 <div><div class="k">Built in</div><div class="v">Figma components, variants and color tokens</div></div>
 <div><div class="k">Covers</div><div class="v">Banners, listing images, A+ content</div></div>
 </div>
 </div>
 </header>
 
-<nav class="g-tabs" aria-label="Guide sections"><div class="gw">
+<nav class="g-tabs" aria-label="Guide sections"><div class="gw g-bar">
+<button class="g-jump" type="button" aria-expanded="false" aria-controls="g-links"><span class="lbl">Jump to</span> <b id="g-current">About</b><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<div class="g-links" id="g-links">
 <a href="#about">About</a>
+<a href="#build">Example build</a>
 <a href="#rules">The 7 rules</a>
-<a href="#systems">Color systems</a>
-<a href="#color">Color tokens</a>
+<a href="#systems">Color</a>
 <a href="#gradients">Gradients</a>
 <a href="#type">Type</a>
 <a href="#components">Components</a>
 <a href="#modules">Banners &amp; A+</a>
 <a href="#aplus">A+ template</a>
 <a href="#logo">Logo &amp; icons</a>
-</div></nav>
+</div>
+</div><div class="g-progress" aria-hidden="true"><span id="g-prog"></span></div></nav>
 
 <section class="g-sec alt" id="about"><div class="gw">
 <h2 class="g-h">One system for every Amazon placement</h2>
 <p class="g-lede">The guide turns NOW's brand into rules a team can follow at speed: one color system per layout, a fixed tagline, two-weight headlines, and components that carry their own contrast notes. This page is the Figma file rebuilt in code. Everything below is live: pick a color system, a gradient or a product colorway and the components follow.</p>
 <div class="g-story">
-<div class="g-card"><div class="k">The problem</div><h3>[PLACEHOLDER: what was going wrong before the guide]</h3><p class="ph">[PLACEHOLDER: one or two sentences on inconsistent Amazon creative, who it affected, and why it mattered]</p></div>
+<div class="g-card"><div class="k">The problem</div><h3>No cohesive identity on Amazon</h3><p>NOW's Amazon presence never had one cohesive look behind the scenes. Each category told its story differently. I used consumer data to shape a design system built to convert and to tie every NOW category together.</p></div>
 <div class="g-card"><div class="k">What I built</div><h3>Rules, tokens and components in Figma</h3><p>Eight color systems, five gradients, a purple scale and product colorways as tokens; a Nunito type scale; and components from CTA buttons to full A+ modules, each with usage notes written into Figma.</p></div>
-<div class="g-card"><div class="k">Impact</div><h3 class="ph">[PLACEHOLDER: a real result]</h3><p class="ph">[PLACEHOLDER: for example faster A+ builds, fewer review rounds or more consistent listings]</p></div>
+<div class="g-card"><div class="k">Impact</div><h3>Faster to market, more consistent listings</h3><p>Faster A+ builds, fewer review rounds and more consistent listings, getting products to market quicker with higher consumer engagement.</p></div>
 </div>
 </div></section>
 
-<section class="g-sec" id="rules"><div class="gw">
+<section class="g-sec" id="build"><div class="gw">
+<h2 class="g-h">Example build: the Gut Health set</h2>
+<p class="g-lede">The system at work on a real set: Psyllium Husk Caps and Probiotic-10, sold together. Eight listing images and a premium A+ page, built from the rules, colors and components below.</p>
+<h3 class="g-h3" style="margin-top:8px">Listing images</h3>
+<div class="lg" data-images='[["build/listing-02.jpg","Listing image 1: The Complete Gut Health System, both bottles on a purple hero"],["build/listing-03.jpg","Listing image 2: Psyllium Husk and Probiotic-10 side by side with servings, specs and diet badges"],["build/listing-04.jpg","Listing image 3: Feed and Seed Your Gut, why to take both together"],["build/listing-05.jpg","Listing image 4: Psyllium and Probiotic-10 dosing, with diet badges"],["build/listing-06.jpg","Listing image 5: Capsule size for both products, with a ruler"],["build/listing-07.jpg","Listing image 6: Quality Obsessed. Priced Less., 31,000+ quality tests per month, scientists in the lab"],["build/listing-08.jpg","Listing image 7: Psyllium Husk Caps 500mg with its supplement facts"],["build/listing-09.jpg","Listing image 8: Probiotic-10 capsules with their supplement facts"]]'>
+<div class="lg-main">
+<img id="lg-img" src="build/listing-02.jpg" width="1000" height="1000" alt="Listing image 1: The Complete Gut Health System, both bottles on a purple hero">
+<button type="button" class="lg-nav prev" aria-label="Previous image"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M12 4l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<button type="button" class="lg-nav next" aria-label="Next image"><svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path d="M8 4l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+<span class="lg-count" id="lg-count">1 / 8</span>
+</div>
+<div class="lg-side">
+<p class="lg-cap" id="lg-cap" aria-live="polite">Listing image 1: The Complete Gut Health System, both bottles on a purple hero</p>
+<div class="lg-thumbs">
+<button type="button" class="lg-thumb" data-i="0" aria-label="Show image 1 of 8" aria-current="true"><img src="build/listing-02-thumb.jpg" width="160" height="160" alt=""></button>
+<button type="button" class="lg-thumb" data-i="1" aria-label="Show image 2 of 8"><img src="build/listing-03-thumb.jpg" width="160" height="160" alt=""></button>
+<button type="button" class="lg-thumb" data-i="2" aria-label="Show image 3 of 8"><img src="build/listing-04-thumb.jpg" width="160" height="160" alt=""></button>
+<button type="button" class="lg-thumb" data-i="3" aria-label="Show image 4 of 8"><img src="build/listing-05-thumb.jpg" width="160" height="160" alt=""></button>
+<button type="button" class="lg-thumb" data-i="4" aria-label="Show image 5 of 8"><img src="build/listing-06-thumb.jpg" width="160" height="160" alt=""></button>
+<button type="button" class="lg-thumb" data-i="5" aria-label="Show image 6 of 8"><img src="build/listing-07-thumb.jpg" width="160" height="160" alt=""></button>
+<button type="button" class="lg-thumb" data-i="6" aria-label="Show image 7 of 8"><img src="build/listing-08-thumb.jpg" width="160" height="160" alt=""></button>
+<button type="button" class="lg-thumb" data-i="7" aria-label="Show image 8 of 8"><img src="build/listing-09-thumb.jpg" width="160" height="160" alt=""></button>
+</div>
+</div>
+</div>
+<h3 class="g-h3">A+ page</h3>
+<div class="pick" role="group" aria-label="A+ page view">
+<span class="lbl">View</span>
+<button type="button" data-view="desktop" aria-pressed="true">Desktop</button>
+<button type="button" data-view="mobile" aria-pressed="false">Mobile</button>
+</div>
+<div class="ap-frame" id="ap-frame" data-view="desktop">
+<div class="ap-bar" aria-hidden="true"><i></i><i></i><i></i><span>amazon.com · From the manufacturer</span></div>
+<div class="ap-scroll" tabindex="0" aria-label="A+ page preview, scroll to see every module">
+<div class="ap-desktop">
+<img src="build/aplus-desktop-01.jpg" width="1464" height="600" loading="lazy" alt="A+ hero, top: The Complete Gut Health System, natural soluble prebiotic fiber plus 25 billion CFU Probiotic-10, made and quality tested in the USA">
+<img src="build/aplus-desktop-02.jpg" width="1464" height="600" loading="lazy" alt="A+ hero, bottom: Psyllium Husk Caps and Probiotic-10 bottles with product callouts, above a row of diet badges: halal, dairy free, vegan, keto-friendly, nut free, kosher, egg free and soy free">
+<img src="build/aplus-desktop-03.jpg" width="1464" height="600" loading="lazy" alt="Natural Soluble Fiber, Your Gut Needs: an open bottle of psyllium capsules on orange, with benefit chips and a dosing note">
+<img src="build/aplus-desktop-04.jpg" width="1464" height="600" loading="lazy" alt="Swells up to 50X its volume: hands holding the Psyllium Husk Caps bottle and capsules">
+<img src="build/aplus-desktop-05.jpg" width="1464" height="600" loading="lazy" alt="Taking fiber without probiotics is an incomplete approach: a hand holding Probiotic-10, with green benefit chips and a dosing note">
+<img src="build/aplus-desktop-06.jpg" width="1464" height="600" loading="lazy" alt="Clinically validated, DNA-verified strains: Probiotic-10 capsules above a green proof panel listing the 10 strains">
+<img src="build/aplus-desktop-07.jpg" width="1464" height="600" loading="lazy" alt="Quality Obsessed. Priced Less.: lab photos, 31,000+ quality tests per month, and Non-GMO Project, Intertek and NPA marks">
+<img src="build/aplus-desktop-08.jpg" width="1464" height="600" loading="lazy" alt="The NOW Difference: family and employee owned, quality and charitable giving, beside a family photo">
+<img src="build/aplus-desktop-09.jpg" width="1464" height="600" loading="lazy" alt="Supporting a better future with Vitamin Angels: a mother and daughter, with the Vitamin Angels logo">
+</div>
+<div class="ap-mobile">
+<img src="build/aplus-mobile-01.jpg" width="600" height="450" loading="lazy" alt="Mobile. A+ hero, top: The Complete Gut Health System, natural soluble prebiotic fiber plus 25 billion CFU Probiotic-10, made and quality tested in the USA">
+<img src="build/aplus-mobile-02.jpg" width="600" height="450" loading="lazy" alt="Mobile. A+ hero, bottom: Psyllium Husk Caps and Probiotic-10 bottles with product callouts, above a row of diet badges: halal, dairy free, vegan, keto-friendly, nut free, kosher, egg free and soy free">
+<img src="build/aplus-mobile-03.jpg" width="600" height="450" loading="lazy" alt="Mobile. Natural Soluble Fiber, Your Gut Needs: an open bottle of psyllium capsules on orange, with benefit chips and a dosing note">
+<img src="build/aplus-mobile-07.jpg" width="600" height="450" loading="lazy" alt="Mobile. Swells up to 50X its volume: hands holding the Psyllium Husk Caps bottle and capsules">
+<img src="build/aplus-mobile-04.jpg" width="600" height="450" loading="lazy" alt="Mobile. Taking fiber without probiotics is an incomplete approach: a hand holding Probiotic-10, with green benefit chips and a dosing note">
+<img src="build/aplus-mobile-08.jpg" width="600" height="450" loading="lazy" alt="Mobile. Clinically validated, DNA-verified strains: Probiotic-10 capsules above a green proof panel listing the 10 strains">
+<img src="build/aplus-mobile-05.jpg" width="600" height="450" loading="lazy" alt="Mobile. Quality Obsessed. Priced Less.: lab photos, 31,000+ quality tests per month, and Non-GMO Project, Intertek and NPA marks">
+<img src="build/aplus-mobile-06.jpg" width="600" height="450" loading="lazy" alt="Mobile. The NOW Difference: family and employee owned, quality and charitable giving, beside a family photo">
+<img src="build/aplus-mobile-09.jpg" width="600" height="450" loading="lazy" alt="Mobile. Supporting a better future with Vitamin Angels: a mother and daughter, with the Vitamin Angels logo">
+</div>
+</div>
+</div>
+<p class="g-note" style="margin-top:12px">Scroll inside the frame to move through all nine modules.</p>
+</div></section>
+
+<section class="g-sec alt" id="rules"><div class="gw">
 <h2 class="g-h">The 7 rules</h2>
 <p class="g-lede">The short list every designer checks before a piece ships.</p>
 <ol class="rules">
-<li><span><b>No AI-generated artwork.</b> Avoid people, our product label, pills, etc. NOW Brand is to appear authentic.</span></li>
+<li><span><b>AI-generated content comes from NOW.</b> Any AI-generated content is produced internally by NOW, following approved guidelines, so the brand always appears authentic.</span></li>
 <li><span><b>Never alter the product label.</b> Use NOW's approved labels exactly as supplied. No relabeling, recoloring, warping or covering label text for hero imagery. Scale proportionally only.</span></li>
 <li><span><b>Color system per layout.</b> Never mix more than 3 color systems.</span></li>
 <li><span><b>The tagline is always stacked:</b> QUALITY OBSESSED. (Nunito Black) over PRICED LESS. (Nunito Light), all caps.</span></li>
@@ -96,9 +160,10 @@
 </ol>
 </div></section>
 
-<section class="g-sec alt" id="systems"><div class="gw">
-<h2 class="g-h">Color systems</h2>
-<p class="g-lede">Pick one per layout: a background with its text and CTA color. Tap a system to see it on a live 300×250 tagline banner.</p>
+<section class="g-sec" id="systems"><div class="gw">
+<h2 class="g-h">Color</h2>
+<h3 class="g-h3" style="margin-top:8px">Color systems</h3>
+<p class="g-lede">Pick one color system per layout: a background with its text and CTA color. Tap a system to see it on a live 300×250 tagline banner.</p>
 <div class="systems" role="group" aria-label="Color system">
 <button class="sys" data-sys="purple" aria-pressed="true" style="background:var(--brand-purple);color:#fff"><b>Purple</b><span>white</span></button>
 <button class="sys" data-sys="orange" aria-pressed="false" style="background:var(--brand-orange);color:#fff"><b>Orange</b><span>white, large only</span></button>
@@ -121,12 +186,13 @@
 <p class="g-note" style="margin-top:16px">One color system per banner. Never put a campaign text color on a brand background, or the reverse. White text on Orange and Green must stay large.</p>
 </div>
 </div>
-</div></section>
-
-<section class="g-sec" id="color"><div class="gw">
-<h2 class="g-h">Color tokens</h2>
-<p class="g-lede">Every token carries its job and its contrast ratio. Tap a swatch to copy its hex.</p>
-<div id="swatches"></div>
+<h3 class="g-h3" id="tokens">Color tokens</h3>
+<p class="g-note">Every token carries its job and its contrast ratio. Pick a group, tap a swatch to read its note, tap again to copy the hex.</p>
+<div class="pal">
+<div class="pal-tabs" id="pal-tabs" role="tablist" aria-label="Token groups"></div>
+<div class="pal-row" id="pal-row" role="tabpanel"></div>
+<div class="pal-detail" aria-live="polite"><i id="pal-chip"></i><div><b id="pal-name"></b> <span id="pal-hex"></span><p id="pal-desc"></p></div><button type="button" class="pal-copy" id="pal-copy">Copy hex</button></div>
+</div>
 </div></section>
 
 <section class="g-sec alt" id="gradients"><div class="gw">
@@ -336,5 +402,6 @@
 </div></footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
+<a class="to-top" id="to-top" href="#main" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 11l5-5 5 5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Top</span></a>
 </body>
 </html>

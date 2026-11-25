@@ -105,7 +105,13 @@ Amazon Creative Design System"):
   reference screenshots of NOW or partner marketing, ASINs, or review
   status notes from the A+ template.
 - Tokens, rules, component specs and copy on the page come straight
-  from the file. The NOW logo is rebuilt from its Figma layers, so keep
+  from the file, with one change Tim made: rule 1 on the page says
+  AI-generated content is produced internally by NOW, following
+  approved guidelines.
+- The "Example build" section shows Tim's Gut Health set from the
+  Approved Layouts page (listing images and the A+ page, desktop and
+  mobile), saved in now-creative-guide/build/. Only the Product Sets
+  may be shown; never the References frame. The NOW logo is rebuilt from its Figma layers, so keep
   the assets/logo-*.svg files and their positions as they are.
 
 ## Where the visuals came from (capture/)
@@ -142,4 +148,3 @@ Chrome path and repo locations before rerunning.
    Share images only work once this domain is live (see Page patterns).
 3. "From a real spec" excerpts on both case studies are placeholders
    until Tim supplies real spec lines.
-4. NOW Creative Guide: role, problem and impact are placeholders.
