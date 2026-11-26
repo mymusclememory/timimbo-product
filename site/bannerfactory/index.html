@@ -27,8 +27,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css?v=20261126d">
-<script src="../motion.js?v=20261126d" defer></script>
+<link rel="stylesheet" href="../styles.css?v=20261126e">
+<script src="../motion.js?v=20261126e" defer></script>
 </head>
 <body class="ui-inter bf">
 <a class="skip" href="#main">Skip to content</a>
@@ -109,17 +109,25 @@
 <h2 class="h2 narrow">The same creative, laid out for each size by rule.</h2>
 <p class="p narrow">Real output from a single upload, shown at reduced scale. Field &amp; Co. is a sample brand made for this case study.</p>
 </div>
-<div class="ads">
-<figure class="ad" style="width:582px;aspect-ratio:970/250"><img src="../images/banner-970x250.jpg" width="840" height="218" alt="Field and Co. sample banner at 970 by 250, the billboard size" loading="lazy"></figure>
-<figure class="ad" style="width:437px;aspect-ratio:728/90"><img src="../images/banner-728x90.jpg" width="840" height="106" alt="Field and Co. sample banner at 728 by 90, the leaderboard size" loading="lazy"></figure>
-<figure class="ad" style="width:180px;aspect-ratio:300/600"><img src="../images/banner-300x600.jpg" width="340" height="682" alt="Field and Co. sample banner at 300 by 600, the half page size" loading="lazy"></figure>
-<figure class="ad" style="width:96px;aspect-ratio:160/600"><img src="../images/banner-160x600.jpg" width="184" height="682" alt="Field and Co. sample banner at 160 by 600, the skyscraper size" loading="lazy"></figure>
-<figure class="ad" style="width:180px;aspect-ratio:300/250"><img src="../images/banner-300x250.jpg" width="600" height="502" alt="Field and Co. sample banner at 300 by 250, the medium rectangle" loading="lazy"></figure>
-<figure class="ad" style="width:202px;aspect-ratio:336/280"><img src="../images/banner-336x280.jpg" width="672" height="562" alt="Field and Co. sample banner at 336 by 280, the large rectangle" loading="lazy"></figure>
-<figure class="ad" style="width:192px;aspect-ratio:320/100"><img src="../images/banner-320x100.jpg" width="640" height="202" alt="Field and Co. sample banner at 320 by 100, the large mobile banner" loading="lazy"></figure>
-<figure class="ad" style="width:192px;aspect-ratio:320/50"><img src="../images/banner-320x50.jpg" width="640" height="102" alt="Field and Co. sample banner at 320 by 50, the mobile banner" loading="lazy"></figure>
+<div class="ads-board">
+<div class="ads-row">
+<figure class="ad a970"><img src="../images/banner-970x250.jpg" width="840" height="218" alt="Field and Co. sample banner at 970 by 250, the billboard size" loading="lazy"><figcaption>970×250</figcaption></figure>
+<div class="ads-stack">
+<figure class="ad a728"><img src="../images/banner-728x90.jpg" width="840" height="106" alt="Field and Co. sample banner at 728 by 90, the leaderboard size" loading="lazy"><figcaption>728×90</figcaption></figure>
+<div class="ads-pair">
+<figure class="ad a320t"><img src="../images/banner-320x100.jpg" width="640" height="202" alt="Field and Co. sample banner at 320 by 100, the large mobile banner" loading="lazy"><figcaption>320×100</figcaption></figure>
+<figure class="ad a320s"><img src="../images/banner-320x50.jpg" width="640" height="102" alt="Field and Co. sample banner at 320 by 50, the mobile banner" loading="lazy"><figcaption>320×50</figcaption></figure>
 </div>
-<p class="cap" style="text-align:left;margin-left:0">Eight of the 16 sizes. Notice the headline stacking on tall sizes, and the button dropping out of the 320×50 strip where there is no room for it.</p>
+</div>
+</div>
+<div class="ads-row ads-row2">
+<figure class="ad a300t"><img src="../images/banner-300x600.jpg" width="340" height="682" alt="Field and Co. sample banner at 300 by 600, the half page size" loading="lazy"><figcaption>300×600</figcaption></figure>
+<figure class="ad a160"><img src="../images/banner-160x600.jpg" width="184" height="682" alt="Field and Co. sample banner at 160 by 600, the skyscraper size" loading="lazy"><figcaption>160×600</figcaption></figure>
+<figure class="ad a300"><img src="../images/banner-300x250.jpg" width="600" height="502" alt="Field and Co. sample banner at 300 by 250, the medium rectangle" loading="lazy"><figcaption>300×250</figcaption></figure>
+<figure class="ad a336"><img src="../images/banner-336x280.jpg" width="672" height="562" alt="Field and Co. sample banner at 336 by 280, the large rectangle" loading="lazy"><figcaption>336×280</figcaption></figure>
+<p class="ads-cap">Eight of the 16 sizes. Notice the headline stacking on tall sizes, and the button dropping out of the 320×50 strip where there is no room for it.</p>
+</div>
+</div>
 </div></section>
 
 <section class="sec"><div class="wrap">
@@ -169,7 +177,7 @@
 <div class="card"><h3 class="ct flush">Partner portal</h3><p class="cp">Retailers and vendors pull brand-approved materials themselves.</p></div>
 <div class="card"><h3 class="ct flush">White label</h3><p class="cp">A version for CPG companies with limited design resources.</p></div>
 </div>
-<div class="card big hl" style="margin-top:40px">
+<div class="card big hl mt">
 <p class="eb">Impact</p>
 <p style="font:500 clamp(20px,2.4vw,24px)/1.4 Inter,sans-serif;margin:0">Cut banner production from a two-week turnaround to one business day. Every size exports within Amazon's file weight requirements, so the set is ready to upload.</p>
 </div>
