@@ -238,8 +238,10 @@ Chrome path and repo locations before rerunning.
    business day"; exports meet Amazon's file weight requirements.
 2. Domain: work.timimbo.com (or similar) on Netlify, CNAME in Wix DNS.
    Share images only work once this domain is live (see Page patterns).
-3. "From a real spec" excerpts on both case studies are placeholders
-   until Tim supplies real spec lines.
+3. Done (Nov 2026): the spec excerpts are real lines, lightly trimmed.
+   Muscle Memory quotes the Recall section of its repo's CLAUDE.md
+   (pricing lines left out); BannerFactory quotes its README's layout and
+   export rules (brand-neutral), labeled "From the project docs".
 4. Done: Optimum Nutrition role filled in. Video titles read from
    posters are approved by Tim (Nov 2026).
 5. NOW 31,000: more units once
