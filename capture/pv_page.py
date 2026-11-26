@@ -138,20 +138,20 @@ page = f'''<!doctype html>
 <title>Photography + Video | Tim Imbordino, TIMIMBO</title>
 <meta name="description" content="Product, lifestyle and campaign photography and video for CPG and wellness brands by Tim Imbordino: NOW, NOW Solutions, True Citrus, Nuzest, N2 Water and more.">
 <meta name="theme-color" content="#0D1015">
-<link rel="canonical" href="https://work.timimbo.com/photo-video/">
+<link rel="canonical" href="https://design.timimbo.com/photo-video/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TIMIMBO">
-<meta property="og:url" content="https://work.timimbo.com/photo-video/">
+<meta property="og:url" content="https://design.timimbo.com/photo-video/">
 <meta property="og:title" content="Photography + Video | TIMIMBO">
 <meta property="og:description" content="Product, lifestyle and campaign photography and video for CPG and wellness brands.">
-<meta property="og:image" content="https://work.timimbo.com/images/og-photo-video.jpg">
+<meta property="og:image" content="https://design.timimbo.com/images/og-photo-video.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="A grid of product and lifestyle photographs for CPG brands">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Photography + Video | TIMIMBO">
 <meta name="twitter:description" content="Product, lifestyle and campaign photography and video for CPG and wellness brands.">
-<meta name="twitter:image" content="https://work.timimbo.com/images/og-photo-video.jpg">
+<meta name="twitter:image" content="https://design.timimbo.com/images/og-photo-video.jpg">
 <meta name="twitter:image:alt" content="A grid of product and lifestyle photographs for CPG brands">
 <link rel="icon" href="../favicon.svg" type="image/svg+xml">
 <link rel="icon" href="../favicon-32.png" type="image/png" sizes="32x32">
