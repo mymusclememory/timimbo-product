@@ -428,3 +428,10 @@ footer .wrap{align-items:center}
 .n31-cap{font:400 14px/1.5 Inter,sans-serif;color:var(--muted);margin:14px 0 0}
 @media (max-width:900px){.n31-fwrap{grid-column:auto}}
 @media (max-width:640px){.n31-live{border-radius:12px}}
+/* Photography + Video: "Product videos" grid inside the Video chapter */
+.pv-sub{margin:56px 0 28px;padding-top:40px;border-top:1px solid var(--line)}
+.pv-subhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 24px;margin-bottom:24px}
+.pv-subhead h3{font:800 clamp(26px,3vw,36px)/1.05 Inter,sans-serif;letter-spacing:-.03em;margin:0}
+.pv-subhead .pv-body{margin:0}
+.pv-prod .pv-vid.h,.pv-prod .pv-vid.h:first-child,.pv-prod .pv-vid.h:nth-child(4){grid-column:span 6}
+@media (max-width:640px){.pv-prod .pv-vid.h,.pv-prod .pv-vid.h:first-child,.pv-prod .pv-vid.h:nth-child(4){grid-column:span 12}.pv-sub{margin-top:40px;padding-top:28px}}

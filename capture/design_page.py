@@ -113,9 +113,9 @@ page = f'''<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css?v=20261126a">
-<script src="../motion.js?v=20261126a" defer></script>
-<script src="../pv.js?v=20261126a" defer></script>
+<link rel="stylesheet" href="../styles.css?v=20261126b">
+<script src="../motion.js?v=20261126b" defer></script>
+<script src="../pv.js?v=20261126b" defer></script>
 </head>
 <body class="ui-inter pv-page ds-page">
 <a class="skip" href="#main">Skip to content</a>

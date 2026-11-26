@@ -33,6 +33,14 @@ CHAPTERS = [
   lead=1,
   alts=['Viviscal dry shampoo held between two hands against pink hexagon tile','A hand pumping Viviscal Pro thickening serum','A jar of NOW Prebiotic Inulin Fiber beside a mug on a yellow background','A hot sauce bottle on a yellow plate between two chili peppers against red','An athlete sitting in a stairwell holding a tub of NOW protein']),
 ]
+# Product launch videos, shown in their own "Product videos" grid inside the Video chapter.
+# Titles are read from each video's poster (YouTube itself was not reachable when they were added).
+PRODUCT_VIDEOS = [
+ ('w8LtNlhoau4', 'NOW', 'Vitamin C + Vitamin D3 Gummies', '', 'h'),
+ ('Ex-tXA6bGJ4', 'NOW Solutions', 'niteZen Magnesium Body Cream', '', 'h'),
+ ('V3jGuraciMI', 'NOW', 'Omega-3 Fish Oil Gummy Chews', '', 'h'),
+ ('J8kJ8xOyRWw', 'NOW Solutions', 'Vitamin C Skincare', '', 'h'),
+]
 VIDEOS = [
  ('Y_XiM882eto', 'NOW', 'Founder tribute', '', 'h', 'AI-generated artwork, voiceover and animated archival photos, for an internal marketing piece honoring NOW\'s founder.'),
  ('O3nR7xAuR7c', 'NOW', 'From Supplements to Self-Care: Discover the NOW Way to Wellness', '0:37', 'h'),
@@ -78,9 +86,9 @@ def chapter(c, n):
 </div>
 </section>'''
 
-def videos(n):
+def video_cards(items):
     cards = []
-    for vid, brand, title, dur, o, *note in VIDEOS:
+    for vid, brand, title, dur, o, *note in items:
         w, h = DIMS['video-' + vid]
         src = WIX_MP4 if vid.startswith('wix') else f'https://www.youtube-nocookie.com/embed/{vid}?autoplay=1&rel=0&playsinline=1'
         typ = 'mp4' if vid.startswith('wix') else 'yt'
@@ -88,6 +96,11 @@ def videos(n):
 <span class="pv-poster"><img src="../images/pv/video-{vid}.jpg" width="{w}" height="{h}" alt="" loading="lazy" decoding="async"><span class="pv-play" aria-hidden="true"></span>{f'<span class="pv-dur">{dur}</span>' if dur else ''}</span>
 <span class="pv-vt"><b>{E(brand)}</b> {E(title)}{f'<span class="pv-note">{E(note[0])}</span>' if note else ''}</span>
 </button>''')
+    return cards
+
+def videos(n):
+    cards = video_cards(VIDEOS)
+    prod = video_cards(PRODUCT_VIDEOS)
     return f'''<section class="pv-ch pv-video" id="video" data-brand="Video" aria-labelledby="video-h">
 <div class="wrap">
 <header class="pv-vhead">
@@ -96,6 +109,12 @@ def videos(n):
 </header>
 <div class="pv-vgrid">
 {chr(10).join(cards)}
+</div>
+<div class="pv-sub" id="product-videos">
+<header class="pv-subhead"><h3>Product videos</h3><p class="pv-body">Launch videos for new NOW and NOW Solutions products.</p></header>
+<div class="pv-vgrid pv-prod">
+{chr(10).join(prod)}
+</div>
 </div>
 <a class="pv-src" href="https://www.timimbo.com/video" target="_blank" rel="noopener">All videos on timimbo.com ↗</a>
 </div>
@@ -106,7 +125,7 @@ def index_rows():
     for n, c in enumerate(CHAPTERS, 1):
         prev = f"../images/pv/{c['key']}-{c['lead']:02d}-800.jpg"
         rows.append(f'<li><a href="#{c["key"]}" data-preview="{prev}"><span class="i-n">{n:02d}</span><span class="i-t">{E(c["title"])}</span><span class="i-k">{E(c["kind"])}</span><span class="i-c">{len(c["alts"])}</span></a></li>')
-    rows.append(f'<li><a href="#video" data-preview="../images/pv/video-O3nR7xAuR7c.jpg"><span class="i-n">{len(CHAPTERS)+1:02d}</span><span class="i-t">Video</span><span class="i-k">Product films and social</span><span class="i-c">{len(VIDEOS)}</span></a></li>')
+    rows.append(f'<li><a href="#video" data-preview="../images/pv/video-O3nR7xAuR7c.jpg"><span class="i-n">{len(CHAPTERS)+1:02d}</span><span class="i-t">Video</span><span class="i-k">Product films and social</span><span class="i-c">{len(VIDEOS)+len(PRODUCT_VIDEOS)}</span></a></li>')
     return '\n'.join(rows)
 
 total = sum(len(c['alts']) for c in CHAPTERS)
@@ -140,9 +159,9 @@ page = f'''<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css?v=20261126a">
-<script src="../motion.js?v=20261126a" defer></script>
-<script src="../pv.js?v=20261126a" defer></script>
+<link rel="stylesheet" href="../styles.css?v=20261126b">
+<script src="../motion.js?v=20261126b" defer></script>
+<script src="../pv.js?v=20261126b" defer></script>
 </head>
 <body class="ui-inter pv-page">
 <a class="skip" href="#main">Skip to content</a>
@@ -163,7 +182,7 @@ page = f'''<!doctype html>
 <h1 class="pv-h1">Real products.<br><span>Real moments.</span></h1>
 <div class="pv-hero-foot">
 <p class="pv-lede">Photography, video, and creative direction that bring a brand's story to life with authenticity and impact. Product, lifestyle and campaign work for CPG and wellness brands.</p>
-<dl class="pv-stats"><div><dt>Projects</dt><dd>{len(CHAPTERS)-1}</dd></div><div><dt>Images</dt><dd>{total}</dd></div><div><dt>Films</dt><dd>{len(VIDEOS)}</dd></div></dl>
+<dl class="pv-stats"><div><dt>Projects</dt><dd>{len(CHAPTERS)-1}</dd></div><div><dt>Images</dt><dd>{total}</dd></div><div><dt>Films</dt><dd>{len(VIDEOS)+len(PRODUCT_VIDEOS)}</dd></div></dl>
 </div>
 <ol class="pv-index" aria-label="Projects">
 {index_rows()}
@@ -200,4 +219,4 @@ page = f'''<!doctype html>
 out = os.path.join(ROOT, '..', 'site', 'photo-video', 'index.html')
 os.makedirs(os.path.dirname(out), exist_ok=True)
 open(out, 'w').write(page)
-print('wrote', out, total, 'images', len(VIDEOS), 'videos')
+print('wrote', out, total, 'images', len(VIDEOS)+len(PRODUCT_VIDEOS), 'videos')
