@@ -83,13 +83,16 @@ netlify.toml publishes the `site` folder as-is.
 - Ember #FF6B3D (Muscle Memory accent), glacier #43C6E8, green #5BD08B,
   gold #E8B843 (personal records only), violet #9B87FF (BannerFactory
   accent)
-- Type: the main portfolio UI (home, 404 and Photography + Video,
-  `<body class="ui-inter">`) is Inter only, and those pages load only
-  Inter. Their menu is Product, Design, Photo + Video, Contact (Contact
+- Type: Inter everywhere (Tim, Nov 2026): every page, headings, numbers
+  and the case studies, loaded from Google Fonts. The one exception is
+  the NOW Amazon Creative Guide's own content and its "Top" button, which
+  stay in NOW's Nunito; its menu and footer are Inter. Do not bring back
+  Space Grotesk, Barlow Condensed or monospace. The Muscle Memory page
+  still says the app itself uses Barlow Condensed, which is a fact about
+  the app, not the site.
+- Menu on every page: Product, Design, Photo + Video, Contact (Contact
   hides below 440px wide so the menu stays on one line; the email is in
-  every footer). Case study pages keep
-  Space Grotesk headings, Inter body and Barlow Condensed for numbers
-  (Google Fonts); do not change their type.
+  every footer).
 
 ## Facts the copy must stay true to
 
