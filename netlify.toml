@@ -22,13 +22,14 @@
   [headers.values]
     Cache-Control = "public, max-age=604800"
 
-# CSS and scripts: reuse for an hour, then check for updates.
+# CSS and scripts: always check for a newer copy (a quick 304 when nothing changed).
+# Pages also link them with ?v=<date>, so a changed file is never mixed with an old one.
 [[headers]]
   for = "/*.css"
   [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate"
+    Cache-Control = "public, max-age=0, must-revalidate"
 
 [[headers]]
   for = "/*.js"
   [headers.values]
-    Cache-Control = "public, max-age=3600, must-revalidate"
+    Cache-Control = "public, max-age=0, must-revalidate"

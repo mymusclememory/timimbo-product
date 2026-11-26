@@ -186,7 +186,13 @@ NOW 31,000 Tests campaign (site/now-31000/):
   wired up with srcset/sizes, so phones download small files. Add a
   variant and srcset for any new large image.
 - netlify.toml sets cache headers: one week for images and exported
-  assets, one hour for CSS and JS.
+  assets; CSS and JS are rechecked on every visit (max-age=0,
+  must-revalidate). Every page links styles.css, motion.js, pv.js,
+  guide.css and guide.js with ?v=<date>. When you change one of those
+  files, bump the ?v= value on every page and in capture/pv_page.py and
+  capture/design_page.py (one sed), so no visitor sees new HTML with an
+  old stylesheet. (Nov 2026: a stale styles.css squeezed the NOW 31,000
+  frame into a thin strip.)
 - Buttons and links keep a touch area of at least 44px tall (menu,
   footer, pills); the guide's pill tabs are 40px.
 
