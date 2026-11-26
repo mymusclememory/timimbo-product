@@ -435,3 +435,7 @@ footer .wrap{align-items:center}
 .pv-subhead .pv-body{margin:0}
 .pv-prod .pv-vid.h,.pv-prod .pv-vid.h:first-child,.pv-prod .pv-vid.h:nth-child(4){grid-column:span 6}
 @media (max-width:640px){.pv-prod .pv-vid.h,.pv-prod .pv-vid.h:first-child,.pv-prod .pv-vid.h:nth-child(4){grid-column:span 12}.pv-sub{margin-top:40px;padding-top:28px}}
+/* Header logo: Tim's "timimbo creative" mark, knocked out to white for the dark header */
+.logo img{display:block;height:34px;width:auto}
+@media (max-width:640px){.logo img{height:30px}}
+@media (max-width:440px){.logo img{height:26px}}

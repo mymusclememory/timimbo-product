@@ -159,15 +159,15 @@ page = f'''<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css?v=20261126b">
-<script src="../motion.js?v=20261126b" defer></script>
-<script src="../pv.js?v=20261126b" defer></script>
+<link rel="stylesheet" href="../styles.css?v=20261126c">
+<script src="../motion.js?v=20261126c" defer></script>
+<script src="../pv.js?v=20261126c" defer></script>
 </head>
 <body class="ui-inter pv-page">
 <a class="skip" href="#main">Skip to content</a>
 
 <nav class="nav" aria-label="Main"><div class="wrap">
-<a class="logo" href="https://timimbo.com" target="_top">TIMIMBO</a>
+<a class="logo" href="https://timimbo.com" target="_top"><img src="../images/logo-timimbo-white.png" width="266" height="68" alt="timimbo creative"></a>
 <div class="links">
 <a href="../">Product</a>
 <a href="../design/">Design</a>

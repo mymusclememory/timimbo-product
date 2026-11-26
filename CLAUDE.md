@@ -97,6 +97,10 @@ netlify.toml publishes the `site` folder as-is.
   Space Grotesk, Barlow Condensed or monospace. The Muscle Memory page
   still says the app itself uses Barlow Condensed, which is a fact about
   the app, not the site.
+- Header logo on every page: Tim's "timimbo creative" mark, knocked out
+  to white for the dark header (site/images/logo-timimbo-white.png, from
+  his logo2-8.avif; 34px tall, 26px on small phones). It links to
+  timimbo.com.
 - Menu on every page: Product, Design, Photo + Video, Contact (Contact
   hides below 440px wide so the menu stays on one line; the email is in
   every footer).
@@ -178,7 +182,8 @@ NOW 31,000 Tests campaign (site/now-31000/):
 - Tim's role: creative director, managed the agency that produced the
   creative and video content. Do not name the agency or the media
   partners (publisher names on the board are planning labels).
-- Results line is a [PLACEHOLDER]. Display, story/reel and Amazon units
+- Results (Tim, Nov 2026): performed above the 15% benchmark, with a
+  high click-through rate and conversion. Display, story/reel and Amazon units
   are not shown yet: the Figma seat hit its render limit.
 
 ## Performance and touch targets
@@ -232,5 +237,5 @@ Chrome path and repo locations before rerunning.
 3. "From a real spec" excerpts on both case studies are placeholders
    until Tim supplies real spec lines.
 4. Graphic design: Tim's role on Optimum Nutrition is a placeholder.
-5. NOW 31,000: results placeholder; real video titles; more units once
+5. NOW 31,000: real video titles; more units once
    Figma renders are available again.
