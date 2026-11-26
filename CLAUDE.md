@@ -28,6 +28,11 @@ Pages:
   script and rerun it. Boards in site/images/design/ (<key>-NN.jpg 2000px,
   -1000.jpg for the page). The home page has a matching "Graphic design"
   section (#design) with one tile per project.
+- site/now-31000/index.html: NOW 31,000 Tests campaign case study
+  (Quality Obsessed, Q4 2026). Hand-written page using the pv-* layout
+  and viewer: the idea, 2 promo films, branded video frames, holiday
+  creative, the system (colors, asset counts). Home case study card 04
+  and a card on the Design page link to it. Images in site/images/now31/.
 - site/muscle-memory/index.html: Muscle Memory + America's Gym
 - site/bannerfactory/index.html: BannerFactory
 - site/now-creative-guide/: NOW Amazon Creative Guide, an interactive
@@ -129,8 +134,9 @@ NOW Amazon Creative Guide (Figma file 8Z97hmdkGYXqRQJKFAgOlT, "NOW
 Amazon Creative Design System"):
 - Tim chose to show it with full NOW branding (Nov 2026). NOW names,
   logos and colors may appear on this page, the home page's CPG brand
-  work and Graphic design sections, the Photography + Video page and the
-  Graphic design page, and nowhere else.
+  work and Graphic design sections and case study card 04, the
+  Photography + Video page, the Graphic design page and the NOW 31,000
+  page, and nowhere else.
 - Never link it to BannerFactory or suggest NOW knows about that tool.
   BannerFactory stays brand-neutral.
 - Do not publish from the file: internal email addresses, the
@@ -161,6 +167,17 @@ Graphic design (home section and site/design/):
 - Optimum Nutrition's role is a [PLACEHOLDER]. One Optimum video link in
   the PDF (youtu.be/cnk_YX5dpMg) no longer exists and is left out.
 - Do not link BannerFactory from this page (it sits next to NOW work).
+
+NOW 31,000 Tests campaign (site/now-31000/):
+- Source: Figma file lKH8EreEwZ0KvNHo1TieO6, page "2026 Q4 Creative
+  Assets". Copy lines, the 31,000 tests claim and asset counts (166 on
+  the board) come from that file. Videos: YouTube AIoe2VBy0k4 and
+  PSh8yWTAI7c (titles on the cards are read from their posters).
+- Tim's role: creative director, managed the agency that produced the
+  creative and video content. Do not name the agency or the media
+  partners (publisher names on the board are planning labels).
+- Results line is a [PLACEHOLDER]. Display, story/reel and Amazon units
+  are not shown yet: the Figma seat hit its render limit.
 
 ## Performance and touch targets
 
@@ -207,3 +224,5 @@ Chrome path and repo locations before rerunning.
 3. "From a real spec" excerpts on both case studies are placeholders
    until Tim supplies real spec lines.
 4. Graphic design: Tim's role on Optimum Nutrition is a placeholder.
+5. NOW 31,000: results placeholder; real video titles; more units once
+   Figma renders are available again.
