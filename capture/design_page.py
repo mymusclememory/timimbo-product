@@ -113,15 +113,15 @@ page = f'''<!doctype html>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css">
-<script src="../motion.js" defer></script>
-<script src="../pv.js" defer></script>
+<link rel="stylesheet" href="../styles.css?v=20261126c">
+<script src="../motion.js?v=20261126c" defer></script>
+<script src="../pv.js?v=20261126c" defer></script>
 </head>
 <body class="ui-inter pv-page ds-page">
 <a class="skip" href="#main">Skip to content</a>
 
 <nav class="nav" aria-label="Main"><div class="wrap">
-<a class="logo" href="https://timimbo.com" target="_top">TIMIMBO</a>
+<a class="logo" href="https://timimbo.com" target="_top"><img src="../images/logo-timimbo-white.png" width="266" height="68" alt="timimbo creative"></a>
 <div class="links">
 <a href="../">Product</a>
 <a class="on" href="./" aria-current="page">Design</a>
@@ -150,10 +150,14 @@ page = f'''<!doctype html>
 
 <section class="ds-more" aria-labelledby="more-h"><div class="wrap">
 <p class="eb">More design</p>
-<h2 class="h2" id="more-h">See a design system in depth.</h2>
+<h2 class="h2" id="more-h">See NOW work in depth.</h2>
 <a class="ds-card" href="../now-creative-guide/">
 <img src="../images/og-now-creative-guide-800.jpg" srcset="../images/og-now-creative-guide-800.jpg 800w, ../images/og-now-creative-guide.jpg 1200w" sizes="(max-width:700px) 92vw, 480px" width="1200" height="630" alt="NOW Amazon Creative Guide cover with the NOW logo" loading="lazy" decoding="async">
 <span><b>NOW Amazon Creative Guide</b> The design system behind NOW's Amazon listings and A+ pages, rebuilt as an interactive guide. <i>Open the guide →</i></span>
+</a>
+<a class="ds-card" href="../now-31000/">
+<img src="../images/og-now-31000-800.jpg" srcset="../images/og-now-31000-800.jpg 800w, ../images/og-now-31000.jpg 1200w" sizes="(max-width:700px) 92vw, 480px" width="1200" height="630" alt="A NOW promo film frame reading 31,000 Quality Tests Each Month over lab beakers of softgels" loading="lazy" decoding="async">
+<span><b>NOW 31,000 Tests campaign</b> A Q4 campaign built on NOW's 31,000 quality tests each month: films, TV frames, holiday creative and a 166-asset system. <i>See the case study →</i></span>
 </a>
 </div></section>
 
