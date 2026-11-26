@@ -29,7 +29,7 @@ PROJECTS = [
   alts=['Campaign portraits of two NOW wellness experts at home, with NOW products in a kitchen',
         'The NOW Wellness Experts video on YouTube, web ads, and a May 2023 wellness calendar on a phone']),
  dict(key='optimum', client='Optimum Nutrition', title='Optimum Nutrition', kind='Campaign',
-  role='[PLACEHOLDER: your role on this project]',
+  role='Digital Art Director / Design Lead',
   body='Create a viral campaign that engages a wide range of fitness enthusiasts backed by honest ingredients and social influencers.',
   video=('1Q7TY1bTGJA', 'Optimum Nutrition', 'Campaign video'),
   alts=['The Optimum Nutrition website with a Gold Standard Whey contest, a Team ON banner stand, PRO packaging and a print ad',

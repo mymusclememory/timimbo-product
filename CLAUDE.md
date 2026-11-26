@@ -130,6 +130,9 @@ BannerFactory (repo mymusclememory/NOWbannerflow):
   specs.
 - 16 standard ad sizes (Amazon DSP + IAB) from one upload, with
   per-size legibility checks.
+- Exports are programmed to meet Amazon's file weight (file size)
+  requirements. Impact (Tim, Nov 2026): production went from a two-week
+  turnaround to one business day.
 - The name on the site is BannerFactory (Tim's call), even though the
   app's own UI currently says "OnSpec".
 - Keep it brand-neutral. Do not show NOW Foods names, products, logos or
@@ -170,7 +173,8 @@ Graphic design (home section and site/design/):
   2024 design PDF and the "website work/Design" images on Drive. Keep
   his words. Where he gave no description (JSSI, NOW Wellness Experts)
   the line only says what the boards show.
-- Optimum Nutrition's role is a [PLACEHOLDER]. One Optimum video link in
+- Optimum Nutrition role (Tim, Nov 2026): Digital Art Director / Design
+  Lead. One Optimum video link in
   the PDF (youtu.be/cnk_YX5dpMg) no longer exists and is left out.
 - Do not link BannerFactory from this page (it sits next to NOW work).
 
@@ -230,12 +234,13 @@ Chrome path and repo locations before rerunning.
 
 ## Open items
 
-1. BannerFactory "Impact" line is a placeholder until Tim has a real
-   result.
+1. Done (Nov 2026): BannerFactory impact is "two-week turnaround to one
+   business day"; exports meet Amazon's file weight requirements.
 2. Domain: work.timimbo.com (or similar) on Netlify, CNAME in Wix DNS.
    Share images only work once this domain is live (see Page patterns).
 3. "From a real spec" excerpts on both case studies are placeholders
    until Tim supplies real spec lines.
-4. Graphic design: Tim's role on Optimum Nutrition is a placeholder.
-5. NOW 31,000: real video titles; more units once
+4. Done: Optimum Nutrition role filled in. Video titles read from
+   posters are approved by Tim (Nov 2026).
+5. NOW 31,000: more units once
    Figma renders are available again.
