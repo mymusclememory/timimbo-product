@@ -30,7 +30,8 @@ Pages:
   section (#design) with one tile per project.
 - site/now-31000/index.html: NOW 31,000 Tests campaign case study
   (Quality Obsessed, Q4 2026). Hand-written page using the pv-* layout
-  and viewer: the idea, 2 promo films, branded video frames, holiday
+  and viewer: the idea, 2 promo films, one branded video frame with the
+  31,000 film playing inside its open panel (Tim, Nov 2026), holiday
   creative, the system (colors, asset counts). Home case study card 04
   and a card on the Design page link to it. Images in site/images/now31/.
 - site/muscle-memory/index.html: Muscle Memory + America's Gym
