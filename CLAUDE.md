@@ -4,8 +4,10 @@
 
 A static microsite of product design case studies for Tim Imbordino
 (TIMIMBO LLC). It is hosted on Netlify and linked from timimbo.com (Wix).
-Target address: a subdomain such as work.timimbo.com, set up with a CNAME
-record in Wix DNS.
+Target address: https://design.timimbo.com (Tim's choice, Nov 2026), a
+CNAME to effortless-capybara-32f00b.netlify.app. timimbo.com is
+registered at GoDaddy and only pointed at Wix, so its DNS records live
+at GoDaddy, not in Wix.
 
 Pages:
 - site/index.html: home, one card per case study, then a "CPG brand
@@ -64,7 +66,7 @@ netlify.toml publishes the `site` folder as-is.
   number in `<ol class="notes">` below. Add class `r` to move the pin
   to the right corner. Hotspots are `aria-hidden`; the notes carry the
   meaning.
-- Share tags point at https://work.timimbo.com. If the final domain
+- Share tags point at https://design.timimbo.com. If the final domain
   changes, update canonical, og:url, og:image and twitter:image on
   every page.
 
@@ -236,7 +238,8 @@ Chrome path and repo locations before rerunning.
 
 1. Done (Nov 2026): BannerFactory impact is "two-week turnaround to one
    business day"; exports meet Amazon's file weight requirements.
-2. Domain: work.timimbo.com (or similar) on Netlify, CNAME in Wix DNS.
+2. Domain: design.timimbo.com. Tim adds it in Netlify (Domain
+   management) and a CNAME "design" in GoDaddy DNS.
    Share images only work once this domain is live (see Page patterns).
 3. Done (Nov 2026): the spec excerpts are real lines, lightly trimmed.
    Muscle Memory quotes the Recall section of its repo's CLAUDE.md
