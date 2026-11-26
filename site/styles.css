@@ -302,7 +302,7 @@ footer .wrap{align-items:center}
 @media (max-width:900px){.pv-vhead{grid-template-columns:1fr}}
 .pv-vgrid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;margin-bottom:24px}
 .pv-vid{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:10px;min-width:0}
-.pv-vid.h{grid-column:span 6}
+.pv-vid.h{grid-column:span 4}
 .pv-vid.h:first-child{grid-column:span 12}
 .pv-vid.v{grid-column:span 2}
 .pv-poster{position:relative;display:block;border-radius:14px;overflow:hidden;background:var(--surface)}
@@ -369,3 +369,7 @@ footer .wrap{align-items:center}
 .cpg-tile.t-parsons,.cpg-tile.t-wx{grid-column:span 5}
 .cpg-tile.t-studio{grid-column:span 12}
 @media (max-width:900px){.cpg-tile.t-jssi,.cpg-tile.t-on,.cpg-tile.t-parsons,.cpg-tile.t-wx,.cpg-tile.t-studio{grid-column:span 12}}
+
+/* Video chapter: one featured film, then the landscape films three across (two on tablets, the last one full width) */
+.pv-note{display:block;margin-top:4px;max-width:70ch}
+@media (min-width:641px) and (max-width:1100px){.pv-vid.h{grid-column:span 6}.pv-vid.h:nth-child(4){grid-column:span 12}}

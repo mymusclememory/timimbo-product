@@ -34,6 +34,7 @@ CHAPTERS = [
   alts=['Viviscal dry shampoo held between two hands against pink hexagon tile','A hand pumping Viviscal Pro thickening serum','A jar of NOW Prebiotic Inulin Fiber beside a mug on a yellow background','A hot sauce bottle on a yellow plate between two chili peppers against red','An athlete sitting in a stairwell holding a tub of NOW protein']),
 ]
 VIDEOS = [
+ ('Y_XiM882eto', 'NOW', 'Founder tribute', '', 'h', 'AI-generated artwork, voiceover and animated archival photos, for an internal marketing piece honoring NOW\'s founder.'),
  ('O3nR7xAuR7c', 'NOW', 'From Supplements to Self-Care: Discover the NOW Way to Wellness', '0:37', 'h'),
  ('7ki-vWagUd0', 'Worry Free', '30% Vinegar Concentrate, product launch 1', '0:37', 'h'),
  ('-4F3riQobr8', 'Worry Free', '30% Vinegar Concentrate, product launch 2', '0:31', 'h'),
@@ -79,13 +80,13 @@ def chapter(c, n):
 
 def videos(n):
     cards = []
-    for vid, brand, title, dur, o in VIDEOS:
+    for vid, brand, title, dur, o, *note in VIDEOS:
         w, h = DIMS['video-' + vid]
         src = WIX_MP4 if vid.startswith('wix') else f'https://www.youtube-nocookie.com/embed/{vid}?autoplay=1&rel=0&playsinline=1'
         typ = 'mp4' if vid.startswith('wix') else 'yt'
         cards.append(f'''<button type="button" class="pv-vid {o}" data-video="{src}" data-type="{typ}" data-alt="{E(brand + ': ' + title)}" aria-label="Play video: {E(brand + ', ' + title)}">
-<span class="pv-poster"><img src="../images/pv/video-{vid}.jpg" width="{w}" height="{h}" alt="" loading="lazy" decoding="async"><span class="pv-play" aria-hidden="true"></span><span class="pv-dur">{dur}</span></span>
-<span class="pv-vt"><b>{E(brand)}</b> {E(title)}</span>
+<span class="pv-poster"><img src="../images/pv/video-{vid}.jpg" width="{w}" height="{h}" alt="" loading="lazy" decoding="async"><span class="pv-play" aria-hidden="true"></span>{f'<span class="pv-dur">{dur}</span>' if dur else ''}</span>
+<span class="pv-vt"><b>{E(brand)}</b> {E(title)}{f'<span class="pv-note">{E(note[0])}</span>' if note else ''}</span>
 </button>''')
     return f'''<section class="pv-ch pv-video" id="video" data-brand="Video" aria-labelledby="video-h">
 <div class="wrap">
