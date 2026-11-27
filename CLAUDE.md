@@ -142,9 +142,12 @@ BannerFactory (repo mymusclememory/NOWbannerflow):
   "One asset, every placement" sample banners are real output from Tim's
   NOW Solutions niteZen template (PC_Demo.json, "Relax & Unwind"),
   rendered by running the app and importing the template, saved in
-  site/images/bf-nz/ (nz-<size>.jpg at 2x, -1x.jpg at native size). A
-  second board shows the same template over a lifestyle photo at 45%
-  opacity and 1px blur (nzbg-*), to show background images. Tim chose
+  site/images/bf-nz/ (nz-<size>.jpg at 2x, -1x.jpg at native size).
+  Tim's one change to his template: the 336x280 logo is nudged left
+  (offset dx -0.0386) so it centers on the copy. A second board (nzbg-*)
+  shows background images: the product layer turned off, and Tim's
+  lifestyle photo cropped so the niteZen tube sits at its center, at 60%
+  opacity over the brand purple. Tim chose
   this knowing the page had been NOW-free; keep the rest of the page
   neutral.
 
