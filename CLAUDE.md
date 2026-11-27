@@ -147,7 +147,11 @@ BannerFactory (repo mymusclememory/NOWbannerflow):
   (offset dx -0.0386) so it centers on the copy. A second board (nzbg-*)
   shows background images: the product layer turned off, and Tim's
   lifestyle photo cropped so the niteZen tube sits at its center, at 60%
-  opacity over the brand purple. Tim chose
+  opacity over the brand purple. On the background board (Tim, Nov 2026)
+  the 336x280 logo and headline, and the 970x250 logo, headline and CTA,
+  are nudged to the canvas's horizontal center (measured from a photo-free
+  render), and the 970x250 uses the full photo, zoomed 1.4x and shifted,
+  so the niteZen label sits on the right. Tim chose
   this knowing the page had been NOW-free; keep the rest of the page
   neutral.
 
