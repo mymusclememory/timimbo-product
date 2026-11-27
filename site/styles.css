@@ -461,3 +461,11 @@ footer .wrap{align-items:center}
 @media (max-width:440px){.logo img{height:26px}}
 /* Process cards: titles take two lines when four sit in a row, so every card's text starts at the same height */
 @media (min-width:900px){.steps .ct{min-height:2.6em}}
+/* BannerFactory: background-image board */
+.ads-bghead{max-width:640px}
+.ads-bghead .eb{margin-bottom:10px}
+.ads-bghead .p{margin:8px 0 0;font-size:16px}
+.ads-bg .bg-row{justify-content:space-between;gap:0}
+.ads-bg .bg-stack{width:55.5%}
+.a970b{width:100%}.a728b{width:75.05%}
+@media (max-width:640px){.ads-bg .bg-row{gap:20px 14px}.ads-bg .a300t{width:calc((100% - 14px) * .42)}.ads-bg .a336{width:calc((100% - 14px) * .58)}.ads-bg .bg-stack{width:100%}}

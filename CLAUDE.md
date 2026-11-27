@@ -137,17 +137,24 @@ BannerFactory (repo mymusclememory/NOWbannerflow):
   turnaround to one business day.
 - The name on the site is BannerFactory (Tim's call), even though the
   app's own UI currently says "OnSpec".
-- Keep it brand-neutral. Do not show NOW Foods names, products, logos or
-  the purple. NOW does not know about this tool. Screenshots use
-  "Field & Co.", a made-up sample brand (capture/assets).
+- Mostly brand-neutral: the editor screenshots use "Field & Co.", a
+  made-up sample brand (capture/assets). EXCEPTION (Tim, Nov 2026): the
+  "One asset, every placement" sample banners are real output from Tim's
+  NOW Solutions niteZen template (PC_Demo.json, "Relax & Unwind"),
+  rendered by running the app and importing the template, saved in
+  site/images/bf-nz/ (nz-<size>.jpg at 2x, -1x.jpg at native size). A
+  second board shows the same template over a lifestyle photo at 45%
+  opacity and 1px blur (nzbg-*), to show background images. Tim chose
+  this knowing the page had been NOW-free; keep the rest of the page
+  neutral.
 
 NOW Amazon Creative Guide (Figma file 8Z97hmdkGYXqRQJKFAgOlT, "NOW
 Amazon Creative Design System"):
 - Tim chose to show it with full NOW branding (Nov 2026). NOW names,
   logos and colors may appear on this page, the home page's CPG brand
   work and Graphic design sections and case study card 04, the
-  Photography + Video page, the Graphic design page and the NOW 31,000
-  page, and nowhere else.
+  Photography + Video page, the Graphic design page, the NOW 31,000
+  page and the BannerFactory sample banners (niteZen), and nowhere else.
 - Never link it to BannerFactory or suggest NOW knows about that tool.
   BannerFactory stays brand-neutral.
 - Do not publish from the file: internal email addresses, the
